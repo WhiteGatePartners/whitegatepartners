@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = "service_znhhajw";
+const TEMPLATE_ID = "template_bldjqrb";
+const PUBLIC_KEY = "7cwVb7VTwrWaNw48w";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (submitted) {
     return (
@@ -34,14 +41,35 @@ export default function ContactForm() {
     );
   }
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: data.get("name") as string,
+          email: data.get("email") as string,
+          message: data.get("message") as string,
+        },
+        { publicKey: PUBLIC_KEY }
+      );
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
-    <form
-      className="folio-form"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-    >
+    <form className="folio-form" onSubmit={handleSubmit}>
       <div className="fld">
         <label htmlFor="type">I am a&hellip;</label>
         <select id="type" name="type">
@@ -94,8 +122,12 @@ export default function ContactForm() {
         />
       </div>
 
-      <button className="folio-submit" type="submit">
-        Send enquiry <span className="ar">→</span>
+      {error && (
+        <p style={{ color: "red", fontSize: 14, marginBottom: 8 }}>{error}</p>
+      )}
+
+      <button className="folio-submit" type="submit" disabled={sending}>
+        {sending ? "Sending…" : <>Send enquiry <span className="ar">→</span></>}
       </button>
     </form>
   );
