@@ -88,7 +88,6 @@ export default function Home() {
       <section className="block" id="services">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 01 — 03</span>
             <div>
               <h2>
                 Three practices that{" "}
@@ -177,7 +176,6 @@ export default function Home() {
       <section className="block approach-section" id="approach">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 04</span>
             <div>
               <h2>
                 How we <em>work.</em>
@@ -289,7 +287,6 @@ export default function Home() {
       <section className="block split-section" id="audience">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 05</span>
             <div>
               <h2>
                 Whichever side of the gate{" "}

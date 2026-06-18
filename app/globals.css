@@ -299,6 +299,9 @@ section.block {
   align-items: start;
   margin-bottom: 70px;
 }
+.head:has(> div:only-child) {
+  grid-template-columns: 1fr;
+}
 .head .num {
   font-size: 15px;
   color: var(--accent);
