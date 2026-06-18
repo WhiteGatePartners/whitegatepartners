@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { client } from "@/sanity/client";
+import { teamMembersQuery } from "@/sanity/queries";
+import { urlForImage } from "@/sanity/image";
 
 export const metadata: Metadata = {
   title: "About Us | Boutique Executive Search Firm, Singapore",
@@ -22,46 +25,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://whitegatepartners.sg/about" },
 };
 
-const team = [
-  {
-    name: "Alexandra Cheng",
-    role: "Managing Partner",
-    bio: "Over 18 years placing finance and compliance leaders across Singapore and Southeast Asia. Former global head of talent at a Singapore-listed bank.",
-    img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Marcus Liew",
-    role: "Partner, Recruitment",
-    bio: "Specialist in sales and commercial hiring for high-growth startups. Has partnered with over 40 Series A–C companies to build their first go-to-market teams.",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Priya Nair",
-    role: "Partner, Talent Advisory",
-    bio: "Former CHRO at a regional MNC. Brings deep expertise in workforce planning, employer brand strategy, and building HR functions that scale.",
-    img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "James Tan",
-    role: "Principal, Consulting",
-    bio: "Specialist in organisation design and HR operating models. Has led people-function transformations across financial services, logistics and technology.",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Sarah Wong",
-    role: "Senior Consultant",
-    bio: "Focuses on accounting and finance recruitment for permanent and contract roles. Known for her deep knowledge of the Singapore finance talent market.",
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "David Koh",
-    role: "Consultant, Risk & Compliance",
-    bio: "Seven years placing compliance, legal and risk professionals across banking, insurance and fintech in Singapore.",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80&auto=format&fit=crop",
-  },
-];
+type TeamMember = {
+  _id: string;
+  name: string;
+  role: string;
+  bio: string;
+  photo?: { asset: { _ref: string }; alt?: string };
+};
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const team: TeamMember[] = await client.fetch(teamMembersQuery);
   return (
     <>
       {/* PAGE HERO */}
@@ -154,24 +127,31 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="team-grid">
-            {team.map((member) => (
-              <div className="team-card" key={member.name}>
-                <div className="tc-photo">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    fill
-                    sizes="33vw"
-                    style={{ objectFit: "cover" }}
-                  />
+            {team.map((member) => {
+              const photoSrc = member.photo
+                ? urlForImage(member.photo).width(600).url()
+                : null;
+              return (
+                <div className="team-card" key={member._id}>
+                  <div className="tc-photo">
+                    {photoSrc && (
+                      <Image
+                        src={photoSrc}
+                        alt={member.photo?.alt ?? member.name}
+                        fill
+                        sizes="33vw"
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
+                  </div>
+                  <div className="tc-body">
+                    <div className="tc-name">{member.name}</div>
+                    <div className="tc-role">{member.role}</div>
+                    <p className="tc-bio">{member.bio}</p>
+                  </div>
                 </div>
-                <div className="tc-body">
-                  <div className="tc-name">{member.name}</div>
-                  <div className="tc-role">{member.role}</div>
-                  <p className="tc-bio">{member.bio}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

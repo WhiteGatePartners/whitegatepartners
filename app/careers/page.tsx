@@ -22,33 +22,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://whitegatepartners.sg/careers" },
 };
 
-const roles = [
-  {
-    title: "Recruitment Consultant — Finance & Compliance",
-    team: "Recruitment",
-    type: "Full-time",
-    level: "2–5 years experience",
-  },
-  {
-    title: "Senior Consultant — Talent Advisory",
-    team: "Talent Advisory",
-    type: "Full-time",
-    level: "5+ years experience",
-  },
-  {
-    title: "Consultant — Sales & Commercial Recruitment",
-    team: "Recruitment",
-    type: "Full-time",
-    level: "1–4 years experience",
-  },
-  {
-    title: "Research Associate",
-    team: "Operations",
-    type: "Full-time",
-    level: "0–2 years experience",
-  },
-];
-
 const benefits = [
   {
     n: "01",
@@ -134,55 +107,23 @@ export default function CareersPage() {
                 disagree well. If that sounds like the kind of place you want
                 to work, read on.
               </p>
+              <Link
+                className="biglink"
+                href="/openings"
+                style={{ display: "inline-flex", marginTop: 32 }}
+              >
+                See current openings <span className="ar">→</span>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* OPEN ROLES */}
-      <section
-        className="block"
-        style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}
-      >
-        <div className="wrap">
-          <div className="head">
-            <span className="num">§ 01</span>
-            <div>
-              <h2>
-                Roles we are <em>actively hiring for.</em>
-              </h2>
-              <p className="sub">
-                All roles are based in Singapore. If you do not see a role that
-                fits but believe you belong here, please introduce yourself
-                anyway — we are always interested in exceptional people.
-              </p>
-            </div>
-          </div>
-          <div className="roles-list">
-            {roles.map((role) => (
-              <div className="role-item" key={role.title}>
-                <div>
-                  <div className="role-title">{role.title}</div>
-                  <div className="role-meta">
-                    <span>{role.team}</span>
-                    <span>{role.type}</span>
-                    <span>{role.level}</span>
-                  </div>
-                </div>
-                <Link className="apply-link" href="/contact">
-                  Apply →
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* BENEFITS */}
-      <section className="block">
+      <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 02</span>
+            <span className="num">§ 01</span>
             <div>
               <h2>
                 What we offer the <em>people who join us.</em>
@@ -209,7 +150,7 @@ export default function CareersPage() {
       <section className="block approach-section">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 03</span>
+            <span className="num">§ 02</span>
             <div>
               <h2>
                 The qualities that <em>matter most here.</em>
@@ -259,21 +200,21 @@ export default function CareersPage() {
           <div className="cta-inner">
             <div>
               <h2>
-                Don&apos;t see the right role?{" "}
-                <em>Reach out anyway.</em>
+                Ready to <em>take a look?</em>
               </h2>
               <p>
-                We make exceptions for exceptional people. Tell us who you are
-                and what you are looking for.
+                Browse our open roles or introduce yourself — we are always
+                interested in exceptional people.
               </p>
             </div>
-            <Link
-              className="biglink"
-              href="/contact"
-              style={{ maxWidth: 340, flexShrink: 0 }}
-            >
-              Introduce yourself <span className="ar">→</span>
-            </Link>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16, flexShrink: 0 }}>
+              <Link className="biglink" href="/openings" style={{ maxWidth: 340 }}>
+                Current openings <span className="ar">→</span>
+              </Link>
+              <Link className="biglink" href="/contact" style={{ maxWidth: 340 }}>
+                Introduce yourself <span className="ar">→</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
