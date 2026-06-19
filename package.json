@@ -13,10 +13,12 @@
     "@portabletext/react": "^6.2.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^6.1.0",
+    "@types/react-google-recaptcha": "^2.1.9",
     "next": "16.2.9",
     "next-sanity": "^13.1.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-google-recaptcha": "^3.1.0",
     "styled-components": "^6.4.2"
   },
   "devDependencies": {

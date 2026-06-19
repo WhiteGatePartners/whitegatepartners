@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_znhhajw";
@@ -8,6 +9,7 @@ const TEMPLATE_ID = "template_bldjqrb";
 const PUBLIC_KEY = "7cwVb7VTwrWaNw48w";
 
 export default function ContactForm() {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -41,15 +43,34 @@ export default function ContactForm() {
     );
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
+
+    const token = recaptchaRef.current?.getValue();
+    if (!token) {
+      setError("Please complete the reCAPTCHA check.");
+      return;
+    }
+
     setSending(true);
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
     try {
+      const verify = await fetch("/api/verify-recaptcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token }),
+      });
+
+      if (!verify.ok) {
+        setError("reCAPTCHA verification failed. Please try again.");
+        recaptchaRef.current?.reset();
+        return;
+      }
+
+      const form = e.currentTarget;
+      const data = new FormData(form);
+
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -60,9 +81,11 @@ export default function ContactForm() {
         },
         { publicKey: PUBLIC_KEY }
       );
+
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again or email us directly.");
+      recaptchaRef.current?.reset();
     } finally {
       setSending(false);
     }
@@ -122,8 +145,13 @@ export default function ContactForm() {
         />
       </div>
 
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+      />
+
       {error && (
-        <p style={{ color: "red", fontSize: 14, marginBottom: 8 }}>{error}</p>
+        <p style={{ color: "red", fontSize: 14, marginTop: 8 }}>{error}</p>
       )}
 
       <button className="folio-submit" type="submit" disabled={sending}>
