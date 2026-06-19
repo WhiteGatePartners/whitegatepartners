@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useCallback, useRef, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_znhhajw";
@@ -14,7 +14,7 @@ type Props = { role: string };
 
 export default function JobApplicationForm({ role }: Props) {
   const formRef = useRef<HTMLFormElement>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -31,44 +31,46 @@ export default function JobApplicationForm({ role }: Props) {
     }
   }
 
-  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (fileError || !formRef.current) return;
+  const handleSubmit = useCallback(
+    async (e: React.SyntheticEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      if (fileError || !formRef.current) return;
 
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setError("Please complete the reCAPTCHA check.");
-      return;
-    }
-
-    setError(null);
-    setSending(true);
-
-    try {
-      const verify = await fetch("/api/verify-recaptcha", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token }),
-      });
-
-      if (!verify.ok) {
-        setError("reCAPTCHA verification failed. Please try again.");
-        recaptchaRef.current?.reset();
+      if (!executeRecaptcha) {
+        setError("reCAPTCHA not ready. Please try again.");
         return;
       }
 
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
-        publicKey: PUBLIC_KEY,
-      });
+      setError(null);
+      setSending(true);
 
-      setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or email us directly.");
-      recaptchaRef.current?.reset();
-    } finally {
-      setSending(false);
-    }
-  }
+      try {
+        const token = await executeRecaptcha("job_application");
+
+        const verify = await fetch("/api/verify-recaptcha", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
+        });
+
+        if (!verify.ok) {
+          setError("reCAPTCHA verification failed. Please try again.");
+          return;
+        }
+
+        await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+          publicKey: PUBLIC_KEY,
+        });
+
+        setSubmitted(true);
+      } catch {
+        setError("Something went wrong. Please try again or email us directly.");
+      } finally {
+        setSending(false);
+      }
+    },
+    [executeRecaptcha, fileError]
+  );
 
   if (submitted) {
     return (
@@ -100,35 +102,17 @@ export default function JobApplicationForm({ role }: Props) {
 
       <div className="fld">
         <label htmlFor="name">Full name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Your full name"
-          required
-        />
+        <input id="name" type="text" name="name" placeholder="Your full name" required />
       </div>
 
       <div className="fld">
         <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="you@email.com"
-          required
-        />
+        <input id="email" type="email" name="email" placeholder="you@email.com" required />
       </div>
 
       <div className="fld">
         <label htmlFor="phone">Phone number</label>
-        <input
-          id="phone"
-          type="tel"
-          name="phone"
-          placeholder="+65 9000 0000"
-          required
-        />
+        <input id="phone" type="tel" name="phone" placeholder="+65 9000 0000" required />
       </div>
 
       <div className="fld">
@@ -152,20 +136,11 @@ export default function JobApplicationForm({ role }: Props) {
         )}
       </div>
 
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-      />
-
       {error && (
-        <p style={{ color: "red", fontSize: 14, marginTop: 8 }}>{error}</p>
+        <p style={{ color: "red", fontSize: 14, marginBottom: 8 }}>{error}</p>
       )}
 
-      <button
-        className="folio-submit"
-        type="submit"
-        disabled={sending || !!fileError}
-      >
+      <button className="folio-submit" type="submit" disabled={sending || !!fileError}>
         {sending ? "Sending…" : <>Submit application <span className="ar">→</span></>}
       </button>
     </form>

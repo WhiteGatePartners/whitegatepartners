@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import RecaptchaProvider from "./components/RecaptchaProvider";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -168,9 +170,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Navbar />
-        {children}
-        <Footer />
+        <RecaptchaProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </RecaptchaProvider>
+        <Analytics />
       </body>
     </html>
   );

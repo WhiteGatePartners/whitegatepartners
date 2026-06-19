@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useCallback, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_znhhajw";
@@ -9,7 +9,7 @@ const TEMPLATE_ID = "template_bldjqrb";
 const PUBLIC_KEY = "7cwVb7VTwrWaNw48w";
 
 export default function ContactForm() {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -29,67 +29,62 @@ export default function ContactForm() {
         >
           Thank <em style={{ fontStyle: "italic", color: "var(--accent)" }}>you.</em>
         </h2>
-        <p
-          style={{
-            fontSize: 20,
-            color: "var(--ink-soft)",
-            marginTop: 24,
-            fontWeight: 300,
-          }}
-        >
+        <p style={{ fontSize: 20, color: "var(--ink-soft)", marginTop: 24, fontWeight: 300 }}>
           We&apos;ll be in touch within one business day.
         </p>
       </div>
     );
   }
 
-  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setError(null);
+  const handleSubmit = useCallback(
+    async (e: React.SyntheticEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setError(null);
 
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setError("Please complete the reCAPTCHA check.");
-      return;
-    }
-
-    setSending(true);
-
-    try {
-      const verify = await fetch("/api/verify-recaptcha", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token }),
-      });
-
-      if (!verify.ok) {
-        setError("reCAPTCHA verification failed. Please try again.");
-        recaptchaRef.current?.reset();
+      if (!executeRecaptcha) {
+        setError("reCAPTCHA not ready. Please try again.");
         return;
       }
 
-      const form = e.currentTarget;
-      const data = new FormData(form);
+      setSending(true);
 
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          name: data.get("name") as string,
-          email: data.get("email") as string,
-          message: data.get("message") as string,
-        },
-        { publicKey: PUBLIC_KEY }
-      );
+      try {
+        const token = await executeRecaptcha("contact_form");
 
-      setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or email us directly.");
-      recaptchaRef.current?.reset();
-    } finally {
-      setSending(false);
-    }
-  }
+        const verify = await fetch("/api/verify-recaptcha", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
+        });
+
+        if (!verify.ok) {
+          setError("reCAPTCHA verification failed. Please try again.");
+          return;
+        }
+
+        const form = e.currentTarget;
+        const data = new FormData(form);
+
+        await emailjs.send(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          {
+            name: data.get("name") as string,
+            email: data.get("email") as string,
+            message: data.get("message") as string,
+          },
+          { publicKey: PUBLIC_KEY }
+        );
+
+        setSubmitted(true);
+      } catch {
+        setError("Something went wrong. Please try again or email us directly.");
+      } finally {
+        setSending(false);
+      }
+    },
+    [executeRecaptcha]
+  );
 
   return (
     <form className="folio-form" onSubmit={handleSubmit}>
@@ -105,53 +100,26 @@ export default function ContactForm() {
 
       <div className="fld">
         <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Your name"
-          required
-        />
+        <input id="name" type="text" name="name" placeholder="Your name" required />
       </div>
 
       <div className="fld">
         <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="you@company.com"
-          required
-        />
+        <input id="email" type="email" name="email" placeholder="you@company.com" required />
       </div>
 
       <div className="fld">
         <label htmlFor="company">Company</label>
-        <input
-          id="company"
-          type="text"
-          name="company"
-          placeholder="Your organisation (optional)"
-        />
+        <input id="company" type="text" name="company" placeholder="Your organisation (optional)" />
       </div>
 
       <div className="fld">
         <label htmlFor="message">How can we help?</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="A little about your team or your goals…"
-          rows={3}
-        />
+        <textarea id="message" name="message" placeholder="A little about your team or your goals…" rows={3} />
       </div>
 
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-      />
-
       {error && (
-        <p style={{ color: "red", fontSize: 14, marginTop: 8 }}>{error}</p>
+        <p style={{ color: "red", fontSize: 14, marginBottom: 8 }}>{error}</p>
       )}
 
       <button className="folio-submit" type="submit" disabled={sending}>
