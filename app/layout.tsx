@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://whitegatepartners.sg"
   ),
   title: {
-    default: "White Gate Partners | Executive Search Singapore",
+    default: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
     template: "%s | White Gate Partners",
   },
   description:
-    "White Gate Partners is a Singapore executive search and specialist recruitment firm. We support executive search, specialist recruitment and talent solutions across Singapore, Southeast Asia and selected international markets, with cross-border experience spanning Malaysia, Thailand, the Philippines, Australia and Europe.",
+    "White Gate Partners is a Singapore-based executive search, specialist recruitment and talent solutions firm supporting regional and cross-border hiring across Southeast Asia and selected international markets.",
   keywords: [
     "executive search Singapore",
     "executive search firm Singapore",
@@ -53,43 +53,41 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_SG",
     siteName: "White Gate Partners",
-    title: "White Gate Partners | Executive Search Singapore",
+    title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
     description:
-      "Boutique executive search and specialist recruitment firm in Singapore. We place leaders and specialists across Finance, Compliance, Sales and HR for startups and MNCs throughout Southeast Asia.",
+      "Singapore-based executive search, specialist recruitment and talent solutions for regional and cross-border hiring across Southeast Asia and selected international markets.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "White Gate Partners — Executive Search Singapore",
+        alt: "White Gate Partners — Regional Executive Search & Specialist Recruitment",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "White Gate Partners | Executive Search Singapore",
+    title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
     description:
-      "Boutique executive search and specialist recruitment firm in Singapore.",
+      "Singapore-based executive search, specialist recruitment and talent solutions firm supporting regional and cross-border hiring across Southeast Asia.",
     images: ["/opengraph-image"],
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": ["Organization", "EmploymentAgency"],
   "@id": "https://whitegatepartners.sg/#organization",
   name: "White Gate Partners",
   legalName: "White Gate Partners Pte. Ltd.",
   url: "https://whitegatepartners.sg",
   logo: {
     "@type": "ImageObject",
-    url: "https://whitegatepartners.sg/Picture1.png",
-    width: 158,
-    height: 158,
+    url: "https://whitegatepartners.co/logo.png",
   },
   image: "https://whitegatepartners.sg/opengraph-image",
   description:
-    "White Gate Partners is a Singapore executive search and specialist recruitment firm. We support executive search, specialist recruitment and talent solutions across Singapore, Southeast Asia and selected international markets.",
+    "White Gate Partners is a Singapore-based executive search, specialist recruitment and talent solutions firm supporting regional and cross-border hiring across Southeast Asia and selected international markets.",
   foundingDate: "2026-01-01",
   address: {
     "@type": "PostalAddress",
@@ -98,13 +96,13 @@ const jsonLd = {
     postalCode: "239366",
     addressCountry: "SG",
   },
-  telephone: "+65 9451 5714",
-  email: "hello@whitegatepartners.sg",
+  telephone: "+65 9168 2181",
+  email: "asher@whitegatepartners.co",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+65 9451 5714",
+    telephone: "+65 9168 2181",
     contactType: "customer service",
-    email: "hello@whitegatepartners.sg",
+    email: "asher@whitegatepartners.co",
     areaServed: ["SG", "MY", "TH", "PH", "AU", "GB"],
     availableLanguage: ["English", "Mandarin Chinese"],
   },

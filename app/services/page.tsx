@@ -5,20 +5,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Solutions | Executive Search, Specialist Recruitment & Talent Solutions",
   description:
-    "Three solutions, one standard. Executive Search for senior leadership, Specialist Recruitment across Finance, Compliance and Sales, and Talent Solutions including HR advisory and org design — Singapore and Southeast Asia.",
+    "Explore White Gate Partners' executive search, specialist recruitment and talent solutions for companies hiring professional, specialist and leadership talent across Singapore, Southeast Asia and selected international markets.",
   keywords: [
     "executive search Singapore",
     "specialist recruitment Singapore",
     "talent solutions Singapore",
     "recruitment firm Singapore",
     "headhunter Singapore",
-    "HR consulting Singapore",
     "talent advisory Singapore",
+    "regional recruitment Singapore",
+    "Southeast Asia recruitment firm",
   ],
   openGraph: {
     title: "Solutions | White Gate Partners",
     description:
-      "Executive Search · Specialist Recruitment · Talent Solutions — Singapore and Southeast Asia.",
+      "Executive Search · Specialist Recruitment · Talent Solutions across Singapore, Southeast Asia and selected international markets.",
     url: "https://whitegatepartners.sg/services",
   },
   alternates: { canonical: "https://whitegatepartners.sg/services" },

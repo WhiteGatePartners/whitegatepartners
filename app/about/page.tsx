@@ -6,20 +6,22 @@ import { teamMembersQuery } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
 
 export const metadata: Metadata = {
-  title: "About Us | Boutique Executive Search Firm, Singapore",
+  title: "About White Gate Partners | Regional Executive Search & Specialist Recruitment",
   description:
-    "White Gate Partners is a boutique executive search and talent solutions firm based at The Iveria, Singapore. We bring a recruiter's reach and a consultant's rigour to every engagement across Singapore and Southeast Asia.",
+    "Learn about White Gate Partners, a Singapore-based executive search, specialist recruitment and talent solutions firm with regional hiring experience across Malaysia, Thailand, the Philippines, Australia and Europe.",
   keywords: [
+    "regional recruitment firm Singapore",
+    "Southeast Asia recruitment firm",
+    "Malaysia recruitment support",
     "executive search firm Singapore",
-    "boutique recruitment Singapore",
-    "talent advisory Singapore",
-    "recruitment firm Singapore",
-    "headhunter Singapore",
+    "specialist recruitment Singapore",
+    "talent solutions Singapore",
+    "cross-border recruitment Singapore",
   ],
   openGraph: {
-    title: "About Us | White Gate Partners",
+    title: "About White Gate Partners | Regional Executive Search & Specialist Recruitment",
     description:
-      "A boutique executive search and specialist recruitment firm in Singapore, with regional coverage across Southeast Asia.",
+      "A Singapore-based executive search, specialist recruitment and talent solutions firm supporting regional and cross-border hiring.",
     url: "https://whitegatepartners.sg/about",
   },
   alternates: { canonical: "https://whitegatepartners.sg/about" },

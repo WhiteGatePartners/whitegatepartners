@@ -5,21 +5,22 @@ import { postsQuery } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
 
 export const metadata: Metadata = {
-  title: "Thought Leadership | Singapore Talent & Hiring Insights",
+  title: "Talent Perspectives | Singapore Hiring & Recruitment Insights",
   description:
-    "Perspectives from White Gate Partners on executive hiring, talent strategy and Singapore's employment market. Practical insights for employers and candidates across Southeast Asia.",
+    "Perspectives from White Gate Partners on executive hiring, specialist recruitment, talent strategy and career topics for employers and candidates across Singapore and Southeast Asia.",
   keywords: [
-    "executive search Singapore insights",
-    "talent strategy Singapore",
     "hiring insights Singapore",
-    "recruitment advice Singapore",
+    "talent perspectives Singapore",
+    "executive search Singapore insights",
+    "specialist recruitment Singapore",
     "Singapore talent market",
     "Southeast Asia recruitment",
+    "recruitment advice Singapore",
   ],
   openGraph: {
-    title: "Thought Leadership | White Gate Partners",
+    title: "Talent Perspectives | White Gate Partners",
     description:
-      "Hiring insights and talent strategy perspectives from our Singapore executive search team.",
+      "Hiring, recruitment and career perspectives from a Singapore-based executive search and specialist recruitment firm.",
     url: "https://whitegatepartners.sg/blog",
   },
   alternates: { canonical: "https://whitegatepartners.sg/blog" },

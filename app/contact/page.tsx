@@ -3,19 +3,20 @@ import ContactForm from "../components/ContactForm";
 import { SocialChips } from "../components/SocialLinks";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get in Touch with White Gate Partners",
+  title: "Contact White Gate Partners | Executive Search & Recruitment Singapore",
   description:
-    "Talk to White Gate Partners about your hiring needs or career move. Based at The Iveria, 2 Kim Yam Road, Singapore. Serving clients across Singapore, Malaysia and Southeast Asia. We respond within one business day.",
+    "Contact White Gate Partners to discuss executive search, specialist recruitment or talent solutions across Singapore, Southeast Asia and selected international markets. We respond within one business day.",
   keywords: [
     "contact White Gate Partners",
     "executive search Singapore contact",
     "recruitment agency Singapore contact",
     "headhunter Singapore contact",
+    "specialist recruitment Singapore",
   ],
   openGraph: {
-    title: "Contact Us | White Gate Partners",
+    title: "Contact White Gate Partners",
     description:
-      "Based at The Iveria, Singapore. We respond to all enquiries within one business day.",
+      "Get in touch with White Gate Partners to discuss hiring needs, executive search, specialist recruitment or talent solutions.",
     url: "https://whitegatepartners.sg/contact",
   },
   alternates: { canonical: "https://whitegatepartners.sg/contact" },

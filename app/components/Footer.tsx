@@ -44,8 +44,8 @@ export default function Footer() {
             <Link href="/contact">The Iveria</Link>
             <Link href="/contact">2 Kim Yam Road</Link>
             <Link href="/contact">Singapore 239366</Link>
-            <a href="mailto:hello@whitegatepartners.sg">
-              hello@whitegatepartners.sg
+            <a href="mailto:ashertan@whitegatepartners.co">
+              ashertan@whitegatepartners.co
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               +65 9451 5714

@@ -3,21 +3,23 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Gate Partners | Executive Search & Recruitment Singapore",
+  title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
   description:
-    "Talent with intention. White Gate Partners is a boutique executive search and specialist recruitment firm in Singapore. We place leaders and specialists across Finance, Compliance, Sales and HR for startups and MNCs throughout Southeast Asia.",
+    "White Gate Partners is a Singapore-based executive search, specialist recruitment and talent solutions firm supporting regional hiring across Southeast Asia, with cross-border experience spanning Malaysia, Thailand, the Philippines, Australia and Europe.",
   keywords: [
-    "executive search Singapore",
-    "recruitment agency Singapore",
-    "headhunter Singapore",
-    "specialist recruitment Singapore",
-    "talent solutions Singapore",
+    "Southeast Asia recruitment firm",
+    "regional recruitment firm Singapore",
+    "Malaysia recruitment support",
+    "executive search Southeast Asia",
+    "specialist recruitment Southeast Asia",
+    "cross-border recruitment Singapore",
     "recruitment firm Singapore",
+    "headhunter Singapore",
   ],
   openGraph: {
-    title: "White Gate Partners | Executive Search & Recruitment Singapore",
+    title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
     description:
-      "Boutique executive search and specialist recruitment in Singapore. Talent, with intention.",
+      "Singapore-based executive search, specialist recruitment and talent solutions for regional and cross-border hiring across Southeast Asia and selected international markets.",
     url: "https://whitegatepartners.sg",
   },
   alternates: { canonical: "https://whitegatepartners.sg" },
