@@ -33,7 +33,7 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-top">
             <span className="kick">White Gate Partners — Singapore</span>
-            <span className="idx">Recruitment / Advisory / Consulting</span>
+            <span className="idx">Executive Search / Specialist Recruitment / Talent Solutions</span>
           </div>
           <h1>
             Talent,
@@ -43,9 +43,8 @@ export default function Home() {
           </h1>
           <div className="hero-lower">
             <p className="lede">
-              A Singapore recruitment, talent advisory and management consulting
-              practice for the startups and multinationals shaping what comes
-              next.
+              A Singapore-based executive search, specialist recruitment and talent solutions firm
+              supporting regional and cross-border hiring across Southeast Asia and selected international markets.
             </p>
             <div className="hero-actions">
               <Link className="biglink" href="/services">
@@ -229,7 +228,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-ph">
               <Image
-                src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1100&q=80&auto=format&fit=crop"
+                src="/businesswoman.jpg"
                 alt="A White Gate professional"
                 fill
                 sizes="50vw"

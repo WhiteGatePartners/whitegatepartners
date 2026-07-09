@@ -9,8 +9,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Solutions" },
-  { href: "/blog", label: "Thought Leadership" },
-  { href: "/careers", label: "Careers" },
+  { href: "/blog", label: "Talent Perspectives" },
+  { href: "/careers", label: "Partnerships" },
 ];
 
 export default function Navbar() {
@@ -38,9 +38,9 @@ export default function Navbar() {
         <nav className="wg-nav">
           <Link className="brand" href="/" aria-label="White Gate Partners">
             <Image
-              src="/Picture1.png"
+              src="/logo_grey_long.jpg"
               alt="White Gate Partners"
-              width={46}
+              width={200}
               height={46}
               priority
               style={{ display: "block" }}
