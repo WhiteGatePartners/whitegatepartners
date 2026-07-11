@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className="wg-nav">
           <Link className="brand" href="/" aria-label="White Gate Partners">
             <Image
-              src="/logo_grey_long.jpg"
+              src="/logo_black_long.png"
               alt="White Gate Partners"
               width={200}
               height={46}
