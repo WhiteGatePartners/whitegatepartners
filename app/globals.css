@@ -875,6 +875,7 @@ section.block {
   overflow: hidden;
 }
 .tc-photo {
+  width: 60%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--grey-mid);
@@ -912,6 +913,27 @@ section.block {
   color: var(--ink-soft);
   font-weight: 300;
   line-height: 1.55;
+}
+.tc-bio p {
+  margin: 0 0 12px;
+}
+.tc-bio p:last-of-type {
+  margin-bottom: 0;
+}
+.tc-more {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+.tc-more:hover {
+  text-decoration: underline;
 }
 
 /* ─── Blog grid ─── */

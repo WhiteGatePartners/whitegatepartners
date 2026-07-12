@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <Image
-              src="/Picture1.png"
+              src="/logo_grey_new.png"
               alt="White Gate Partners"
-              width={72}
-              height={72}
+              width={300}
+              height={156}
               style={{ display: "block" }}
             />
             <p>
@@ -40,10 +40,10 @@ export default function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Office</h4>
-            <Link href="/contact">The Iveria</Link>
+            <h4>Contact</h4>
+            {/* <Link href="/contact">The Iveria</Link>
             <Link href="/contact">2 Kim Yam Road</Link>
-            <Link href="/contact">Singapore 239366</Link>
+            <Link href="/contact">Singapore 239366</Link> */}
             <a href="mailto:ashertan@whitegatepartners.co">
               ashertan@whitegatepartners.co
             </a>

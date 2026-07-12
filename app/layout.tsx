@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RecaptchaProvider from "./components/RecaptchaProvider";
@@ -174,6 +175,7 @@ export default function RootLayout({
           <Footer />
         </RecaptchaProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

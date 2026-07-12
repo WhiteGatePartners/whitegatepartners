@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { client } from "@/sanity/client";
 import { teamMembersQuery } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
+import TeamBio from "@/app/components/TeamBio";
 
 export const metadata: Metadata = {
   title: "About White Gate Partners | Regional Executive Search & Specialist Recruitment",
@@ -141,7 +142,7 @@ export default async function AboutPage() {
                         src={photoSrc}
                         alt={member.photo?.alt ?? member.name}
                         fill
-                        sizes="33vw"
+                        sizes="20vw"
                         style={{ objectFit: "cover" }}
                       />
                     )}
@@ -149,7 +150,7 @@ export default async function AboutPage() {
                   <div className="tc-body">
                     <div className="tc-name">{member.name}</div>
                     <div className="tc-role">{member.role}</div>
-                    <p className="tc-bio">{member.bio}</p>
+                    <TeamBio bio={member.bio} />
                   </div>
                 </div>
               );

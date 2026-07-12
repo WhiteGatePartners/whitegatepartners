@@ -228,7 +228,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-ph">
               <Image
-                src="/businesswoman.jpg"
+                src="/business.jpeg"
                 alt="A White Gate professional"
                 fill
                 sizes="50vw"
@@ -253,14 +253,14 @@ export default function Home() {
                 a vendor.
               </p>
               <dl className="about-dl">
-                <div>
+                {/* <div>
                   <dt>Founded</dt>
                   <dd>1 January 2026</dd>
                 </div>
                 <div>
                   <dt>Located</dt>
                   <dd>The Iveria · Kim Yam Road</dd>
-                </div>
+                </div> */}
                 <div>
                   <dt>Entity</dt>
                   <dd>White Gate Partners Pte. Ltd.</dd>
