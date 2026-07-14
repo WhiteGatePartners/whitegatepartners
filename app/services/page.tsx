@@ -33,110 +33,66 @@ export default function SolutionsPage() {
         <div className="wrap">
           <span className="kick">What we do</span>
           <h1>
-            Three solutions, <em>one standard.</em>
+            Three solutions, delivered with{" "}
+            <em>experience and accountability.</em>
           </h1>
           <p className="lede">
-            We pair the reach of a recruitment firm with the rigour of a
-            consultancy — so the people we place and the strategies we shape
-            move your organisation forward together.
+            Across executive search, specialist recruitment and talent
+            solutions, we bring the same standard of context, judgement and
+            accountability to every engagement — whether supporting a
+            leadership search, specialist role, market mapping exercise or
+            broader talent project.
           </p>
         </div>
       </section>
 
-      {/* INDUSTRIES STRIP */}
-      <div className="strip">
+      {/* SOLUTIONS OVERVIEW */}
+      <section className="block" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="strip-inner">
-            <span className="strip-lead">Solutions covering —</span>
-            <div className="strip-tags">
-              <span>Accounting &amp; Finance</span>
-              <span>Compliance &amp; Risk</span>
-              <span>Sales &amp; Commercial</span>
-              <span>HR &amp; Operations</span>
-              <span>Technology</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* SOLUTIONS LIST */}
-      <section className="block">
-        <div className="wrap">
-          <div className="head">
-            <span className="num">§ 01 — 03</span>
-            <div>
-              <h2>
-                Three solutions that <em>answer to one another.</em>
-              </h2>
-              <p className="sub">
-                Every engagement draws on all three disciplines. A search
-                becomes advisory when the brief needs rethinking; advisory work
-                leads to a search when the strategy is clear.
-              </p>
-            </div>
-          </div>
-          <div className="svc-list">
-            <div className="svc-row" id="executive-search">
-              <span className="rn">01</span>
+          <div className="solution-cards">
+            <div className="solution-card">
+              <span className="sc-num">01</span>
               <h3>
                 Executive <em>Search</em>
               </h3>
-              <div className="body">
-                <p>
-                  Retained and exclusive searches for the leaders who define a
-                  function — directors, department heads and C-suite
-                  appointments. The best candidates are rarely looking; we find
-                  them anyway.
-                </p>
-                <div className="ts">
-                  <b>C-Suite &amp; Board</b>
-                  <b>Functional Heads</b>
-                  <b>Regional Mandates</b>
-                  <b>Retained</b>
-                  <b>Permanent</b>
-                </div>
-              </div>
+              <p>
+                Bespoke search for senior, confidential and business-critical
+                roles, supported by targeted market mapping, discreet
+                outreach and careful assessment.
+              </p>
+              <a href="#executive-search" className="explore">
+                Explore in detail <span className="ar">→</span>
+              </a>
             </div>
-            <div className="svc-row" id="specialist-recruitment">
-              <span className="rn">02</span>
+            <div className="solution-card">
+              <span className="sc-num">02</span>
               <h3>
                 Specialist <em>Recruitment</em>
               </h3>
-              <div className="body">
-                <p>
-                  Qualified professionals placed with the depth of assessment
-                  that specialist roles demand — from mid-level practitioners to
-                  senior individual contributors across our core practice areas.
-                </p>
-                <div className="ts">
-                  <b>Accounting</b>
-                  <b>Compliance</b>
-                  <b>Sales &amp; commercial</b>
-                  <b>Permanent</b>
-                  <b>Contract</b>
-                  <b>Interim</b>
-                </div>
-              </div>
+              <p>
+                Structured specialist recruitment for professional,
+                specialist and mid-to-senior roles, built around market
+                knowledge, candidate pipelines and practical delivery
+                models.
+              </p>
+              <a href="#specialist-recruitment" className="explore">
+                Explore in detail <span className="ar">→</span>
+              </a>
             </div>
-            <div className="svc-row" id="talent-solutions">
-              <span className="rn">03</span>
+            <div className="solution-card">
+              <span className="sc-num">03</span>
               <h3>
                 Talent <em>Solutions</em>
               </h3>
-              <div className="body">
-                <p>
-                  Beyond the brief — hiring strategy, salary benchmarking,
-                  employer brand and HR operating model design for organisations
-                  that want to build deliberately, not reactively.
-                </p>
-                <div className="ts">
-                  <b>Hiring strategy</b>
-                  <b>Salary mapping</b>
-                  <b>Employer brand</b>
-                  <b>Org design</b>
-                  <b>HR models</b>
-                </div>
-              </div>
+              <p>
+                Agile and scalable talent solutions designed around evolving
+                business needs, including contract hiring, project
+                recruitment, market mapping, hiring advisory and regional
+                talent intelligence.
+              </p>
+              <a href="#talent-solutions" className="explore">
+                Explore in detail <span className="ar">→</span>
+              </a>
             </div>
           </div>
         </div>
@@ -149,29 +105,31 @@ export default function SolutionsPage() {
             <span className="num">§ 04</span>
             <div>
               <h2>
-                A closer look at <em>how we work.</em>
+                A closer look at <em>each solution.</em>
               </h2>
             </div>
           </div>
 
-          <div className="svc-expanded">
+          <div className="svc-expanded" id="executive-search">
             <div className="svc-expanded-grid">
               <div>
                 <div className="svc-num">01</div>
                 <h3>Executive Search</h3>
                 <p>
-                  At director level and above, the best candidates are not on
-                  job boards. We run retained and exclusive searches, mapping
-                  the available leadership talent across Singapore and the
-                  region before approaching anyone.
+                  Bespoke search for senior, confidential and
+                  business-critical appointments where targeted market
+                  mapping, discreet outreach and careful assessment matter.
+                  We help clients identify, engage and assess leaders and
+                  senior professionals who may not be actively visible in the
+                  market.
                 </p>
                 <ul>
-                  <li>C-Suite &amp; board-level appointments</li>
-                  <li>Department &amp; function heads</li>
-                  <li>Regional leadership roles</li>
-                  <li>Divisional directors &amp; general managers</li>
-                  <li>Confidential &amp; succession searches</li>
-                  <li>Retained and exclusive mandates</li>
+                  <li>C-suite and leadership appointments</li>
+                  <li>Functional heads and senior individual contributors</li>
+                  <li>Country, regional and general management roles</li>
+                  <li>Confidential and succession-related searches</li>
+                  <li>Market mapping and targeted candidate outreach</li>
+                  <li>Retained, exclusive or tailored search arrangements</li>
                 </ul>
               </div>
               <div className="svc-expanded-photo">
@@ -186,7 +144,7 @@ export default function SolutionsPage() {
             </div>
           </div>
 
-          <div className="svc-expanded">
+          <div className="svc-expanded" id="specialist-recruitment">
             <div className="svc-expanded-grid">
               <div className="svc-expanded-photo">
                 <Image
@@ -201,42 +159,52 @@ export default function SolutionsPage() {
                 <div className="svc-num">02</div>
                 <h3>Specialist Recruitment</h3>
                 <p>
-                  The professionals who keep your organisation running — placed
-                  with the rigour that specialist roles demand. We cover the
-                  full spectrum of mid to senior appointments across our core
-                  practice areas.
+                  Structured recruitment for professional, specialist and
+                  mid-to-senior roles where market knowledge, candidate
+                  engagement and role fit are critical. We support clients
+                  through targeted sourcing, practical assessment and
+                  sustainable candidate pipelines across business-critical
+                  functions.
                 </p>
                 <ul>
-                  <li>Accounting &amp; finance professionals</li>
-                  <li>Compliance, legal &amp; risk specialists</li>
-                  <li>Sales, commercial &amp; BD leaders</li>
-                  <li>HR, people &amp; operations roles</li>
-                  <li>Technology &amp; product specialists</li>
-                  <li>Permanent, contract &amp; interim placements</li>
+                  <li>Professional, specialist and mid-to-senior appointments</li>
+                  <li>Technology, engineering and product specialists</li>
+                  <li>Sales, marketing, commercial and business development roles</li>
+                  <li>Supply chain, logistics and procurement roles</li>
+                  <li>Regulatory, quality, clinical and medical affairs roles</li>
+                  <li>Finance, accounting and corporate functions</li>
+                  <li>Legal, compliance, HR and people operations roles</li>
+                  <li>Permanent, contract and interim hiring</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="svc-expanded">
+          <div className="svc-expanded" id="talent-solutions">
             <div className="svc-expanded-grid">
               <div>
                 <div className="svc-num">03</div>
                 <h3>Talent Solutions</h3>
                 <p>
-                  When the question is bigger than &ldquo;who do we hire
-                  next?&rdquo; — from a focused hiring strategy sprint to a
-                  multi-year people function advisory partnership, always with
-                  a practitioner, not a generalist.
+                  Agile and scalable talent solutions designed around
+                  evolving business needs, including contract hiring, project
+                  recruitment, market mapping, hiring advisory and regional
+                  talent intelligence. We structure each engagement around
+                  the client&apos;s priorities, timeline and level of support
+                  required.
                 </p>
                 <ul>
-                  <li>Hiring strategy &amp; workforce planning</li>
-                  <li>Market &amp; salary benchmarking</li>
-                  <li>Employer brand positioning &amp; audits</li>
-                  <li>Organisation design &amp; restructuring</li>
-                  <li>HR operating model design</li>
-                  <li>Compensation &amp; benefits frameworks</li>
-                  <li>Scale-up readiness &amp; people function build-outs</li>
+                  <li>Contract hiring and project recruitment support</li>
+                  <li>Market mapping and regional talent intelligence</li>
+                  <li>Hiring advisory, role calibration and talent pipeline planning</li>
+                  <li>
+                    Fractional HR support through our network of experienced
+                    HR leaders and practitioners
+                  </li>
+                  <li>
+                    Flexible engagement models based on project scope,
+                    timeline and business priorities
+                  </li>
                 </ul>
               </div>
               <div className="svc-expanded-photo">
@@ -253,99 +221,127 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section className="block approach-section">
+      {/* HOW WE WORK */}
+      <section className="block process-section" id="how-we-work">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 05</span>
             <div>
+              <span className="eyebrow on-dark">How we work</span>
               <h2>
-                How a White Gate search <em>actually works.</em>
+                A clear <em>process</em>, adapted to each search or talent
+                project.
               </h2>
               <p className="sub">
-                Every engagement follows a disciplined process — from brief to
-                placement and beyond.
+                Every engagement starts with context. We define what success
+                looks like, map the relevant market, engage the right talent
+                and stay close to the process from briefing to decision.
               </p>
             </div>
           </div>
-          <div className="vals">
-            <div className="val-card">
-              <div className="vn">i</div>
-              <h3>Brief &amp; discovery</h3>
+          <div className="process-grid">
+            <div className="process-step">
+              <span className="pn">01</span>
+              <h3>Understand the Context</h3>
               <p>
-                We start by understanding not just the role, but the team, the
-                culture and the trajectory.
+                We clarify the business need, role requirements, team
+                structure, reporting line, compensation range, success
+                profile and organisational context before starting the work.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">ii</div>
-              <h3>Market mapping</h3>
+            <div className="process-step">
+              <span className="pn">02</span>
+              <h3>Map the Market</h3>
               <p>
-                We map the available talent before approaching anyone — giving
-                you an honest picture of what&apos;s achievable.
+                We identify relevant companies, talent pools, candidate
+                segments and market conditions across Singapore, Southeast
+                Asia or selected international markets.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">iii</div>
-              <h3>Considered shortlist</h3>
+            <div className="process-step">
+              <span className="pn">03</span>
+              <h3>Engage the Right Talent</h3>
               <p>
-                Three to five candidates, each thoroughly interviewed — never
-                a stack of CVs forwarded without judgement.
+                We approach suitable candidates directly and professionally,
+                including passive talent who may not be actively looking.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">iv</div>
-              <h3>Placement &amp; beyond</h3>
+            <div className="process-step">
+              <span className="pn">04</span>
+              <h3>Assess Fit and Motivation</h3>
               <p>
-                We stay involved through offer, onboarding and the first three
-                months — because that&apos;s when a placement either takes
-                root or doesn&apos;t.
+                We evaluate experience, capability, motivation, communication
+                style, compensation expectations, cultural alignment and fit
+                with the organisation&apos;s environment.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">05</span>
+              <h3>Support the Decision</h3>
+              <p>
+                We manage feedback, interview coordination, offer discussions
+                and practical follow-through until the assignment or project
+                reaches a clear outcome.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AUDIENCE SPLIT */}
-      <section className="block split-section">
+      {/* TALENT COVERAGE */}
+      <section className="block coverage-section" id="talent-coverage">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 06</span>
             <div>
+              <span className="eyebrow">Talent coverage</span>
               <h2>
-                Whichever side of the gate <em>you stand on.</em>
+                Hiring and talent coverage across selected markets, sectors
+                and functions.
               </h2>
+              <p className="sub">
+                White Gate Partners supports search, recruitment and talent
+                assignments across selected markets, business-critical
+                sectors and specialist functions where targeted talent access
+                and market understanding matter.
+              </p>
             </div>
           </div>
-          <div className="split-grid">
-            <div className="aud" id="employers">
-              <span className="t">For Employers</span>
-              <h3>
-                Build the team <em>behind the growth.</em>
-              </h3>
-              <p>
-                Whether you need a single specialist or a full function, we
-                bring a considered approach to every brief — qualifying
-                candidates thoroughly and presenting only those worth your
-                time.
-              </p>
-              <Link className="biglink" href="/contact">
-                Start a search <span className="ar">→</span>
-              </Link>
+          <div className="coverage-grid">
+            <div className="coverage-col">
+              <h3>Markets</h3>
+              <ul>
+                <li>Singapore</li>
+                <li>Malaysia</li>
+                <li>Southeast Asia</li>
+                <li>China</li>
+                <li>Europe</li>
+                <li>Selected international markets</li>
+              </ul>
             </div>
-            <div className="aud" id="candidates">
-              <span className="t">For Candidates</span>
-              <h3>
-                Find the move <em>worth making.</em>
-              </h3>
-              <p>
-                We represent professionals to organisations that match their
-                ambition — always with honest counsel and total discretion,
-                whether or not you are actively searching.
-              </p>
-              <Link className="biglink" href="/contact">
-                Introduce yourself <span className="ar">→</span>
-              </Link>
+            <div className="coverage-col">
+              <h3>Sector Coverage</h3>
+              <ul>
+                <li>Technology &amp; AI</li>
+                <li>Life Sciences &amp; Healthcare</li>
+                <li>Manufacturing &amp; Semiconductor</li>
+                <li>Supply Chain &amp; Logistics</li>
+                <li>Financial Services &amp; Insurance</li>
+                <li>Professional Services</li>
+                <li>Chemicals &amp; Specialty Materials</li>
+                <li>Energy &amp; Renewables</li>
+              </ul>
+            </div>
+            <div className="coverage-col">
+              <h3>Functional Coverage</h3>
+              <ul>
+                <li>Leadership &amp; General Management</li>
+                <li>Sales &amp; Commercial</li>
+                <li>Finance &amp; Accounting</li>
+                <li>Legal, Compliance &amp; Risk</li>
+                <li>HR &amp; Operations</li>
+                <li>Technology &amp; Engineering</li>
+                <li>Supply Chain &amp; Procurement</li>
+                <li>Regulatory, Quality &amp; Clinical</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -357,14 +353,15 @@ export default function SolutionsPage() {
           <div className="cta-inner">
             <div>
               <h2>
-                Ready to <em>start a search?</em>
+                Let&apos;s talk about <em>who you need next.</em>
               </h2>
               <p>
-                Tell us what you&apos;re looking for and we&apos;ll be in
-                touch within one business day.
+                Whether you are planning a leadership search, scaling a
+                function or reviewing broader talent needs, we&apos;d
+                welcome the conversation.
               </p>
             </div>
-            <Link className="biglink" href="/contact" style={{ maxWidth: 320, flexShrink: 0 }}>
+            <Link className="biglink" href="/contact" style={{ maxWidth: 340, flexShrink: 0 }}>
               Get in touch <span className="ar">→</span>
             </Link>
           </div>

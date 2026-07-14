@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SocialIcons, WHATSAPP_URL } from "./SocialLinks";
+import { SocialIcons } from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -16,18 +16,17 @@ export default function Footer() {
               style={{ display: "block" }}
             />
             <p>
-              Recruitment, talent advisory and management consulting for the
-              organisations building Singapore&apos;s next chapter.
+              Executive search, specialist recruitment and talent solutions
+              for regional and cross-border hiring.
             </p>
-            <SocialIcons />
           </div>
 
           <div className="foot-col">
             <h4>Company</h4>
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/careers">Careers</Link>
-            <Link href="/blog">Thought Leadership</Link>
+            <Link href="/careers">Partnerships</Link>
+            <Link href="/blog">Talent Perspectives</Link>
           </div>
 
           <div className="foot-col">
@@ -35,27 +34,21 @@ export default function Footer() {
             <Link href="/services">Executive Search</Link>
             <Link href="/services">Specialist Recruitment</Link>
             <Link href="/services">Talent Solutions</Link>
-            <Link href="/services#employers">For Employers</Link>
-            <Link href="/services#candidates">For Candidates</Link>
           </div>
 
           <div className="foot-col">
             <h4>Contact</h4>
-            {/* <Link href="/contact">The Iveria</Link>
-            <Link href="/contact">2 Kim Yam Road</Link>
-            <Link href="/contact">Singapore 239366</Link> */}
-            <a href="mailto:ashertan@whitegatepartners.co">
-              ashertan@whitegatepartners.co
+            <a href="mailto:asher@whitegatepartners.co">
+              asher@whitegatepartners.co
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              +65 9451 5714
-            </a>
+            <a href="tel:+6591682181">+65 9168 2181</a>
+            <SocialIcons />
           </div>
         </div>
 
         <div className="foot-bot">
           <span>© 2026 White Gate Partners Pte. Ltd. · UEN 202600064K</span>
-          <span>Employment Agency License: 26C3291</span>
+          <span>Employment Agency Licence: 26C3291</span>
         </div>
       </div>
     </footer>

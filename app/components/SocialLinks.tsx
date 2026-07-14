@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = "https://wa.me/6594515714";
+export const WHATSAPP_URL = "https://wa.me/6591682181";
 export const WECHAT_URL = "weixin://";
 export const LINKEDIN_URL = "#"; // update when URL is provided
 
@@ -23,10 +23,10 @@ const LinkedInIcon = ({ size = 18 }: { size?: number }) => (
 export function SocialIcons() {
   return (
     <div className="foot-social">
-      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +65 9451 5714">
+      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +65 9168 2181">
         <WhatsAppIcon size={20} />
       </a>
-      <a href={WECHAT_URL} aria-label="WeChat +65 9451 5714">
+      <a href={WECHAT_URL} aria-label="WeChat +65 9168 2181">
         <WeChatIcon size={20} />
       </a>
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -39,10 +39,10 @@ export function SocialIcons() {
 export function SocialChips() {
   return (
     <div className="contact-social">
-      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="social-chip" title="+65 9451 5714">
+      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="social-chip" title="+65 9168 2181">
         <WhatsAppIcon /> WhatsApp
       </a>
-      <a href={WECHAT_URL} className="social-chip" title="+65 9451 5714">
+      <a href={WECHAT_URL} className="social-chip" title="+65 9168 2181">
         <WeChatIcon /> WeChat
       </a>
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="social-chip" title="LinkedIn">

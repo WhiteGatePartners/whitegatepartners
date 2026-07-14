@@ -9,8 +9,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Solutions" },
-  { href: "/blog", label: "Talent Perspectives" },
   { href: "/careers", label: "Partnerships" },
+  { href: "/blog", label: "Talent Perspectives" },
 ];
 
 export default function Navbar() {
@@ -40,8 +40,8 @@ export default function Navbar() {
             <Image
               src="/logo_grey_new.png"
               alt="White Gate Partners"
-              width={300}
-              height={156}
+              width={380}
+              height={87}
               priority
               style={{ display: "block" }}
             />

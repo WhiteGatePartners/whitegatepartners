@@ -81,7 +81,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 78px;
+  height: 96px;
 }
 .brand {
   display: flex;
@@ -239,17 +239,6 @@ button {
   inset: 0;
   background: linear-gradient(120deg, rgba(60, 90, 110, 0.42), transparent 60%);
 }
-.hero-img .cap {
-  position: absolute;
-  left: 28px;
-  bottom: 24px;
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  z-index: 2;
-}
-
 /* ─── Strip (industries) ─── */
 .strip {
   border-top: 1px solid var(--line);
@@ -286,6 +275,34 @@ button {
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
+}
+
+/* ─── Eyebrow ─── */
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+.eyebrow.on-dark {
+  color: var(--accent-2);
+}
+.eyebrow.on-dark::after {
+  background: var(--accent-2);
 }
 
 /* ─── Section head ─── */
@@ -423,6 +440,205 @@ section.block {
   font-size: 15.5px;
   color: rgba(230, 230, 227, 0.62);
   font-weight: 300;
+}
+
+/* ─── Who we support ─── */
+.support-section {
+  background: var(--paper);
+}
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.support-card {
+  background: var(--paper);
+  padding: 40px 44px 44px;
+}
+.support-card .sn {
+  font-size: 14px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.support-card h3 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 20px 0 12px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.support-card p {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* ─── Why White Gate Partners ─── */
+.why-section {
+  background: var(--paper);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 80px;
+  align-items: center;
+}
+.why-ph {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--ink);
+}
+.why-ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.55) contrast(1.03);
+}
+.why-h2 {
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.why-h2 em {
+  font-style: italic;
+}
+.why-lede {
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin-top: 24px;
+  font-weight: 300;
+}
+.why-points {
+  margin-top: 36px;
+  border-top: 1px solid var(--line);
+}
+.why-point {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.why-point .wn {
+  font-size: 14px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+}
+.why-point h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.why-point p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.why-cta {
+  margin-top: 34px;
+}
+.why-cta .t {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+/* ─── How we work (process) ─── */
+.process-section {
+  background: var(--charcoal);
+  color: var(--paper);
+}
+.process-section .head h2 {
+  color: var(--paper);
+}
+.process-section .head .sub {
+  color: rgba(230, 230, 227, 0.7);
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 34px;
+}
+.process-step {
+  padding-right: 6px;
+}
+.process-step .pn {
+  display: block;
+  font-size: 13px;
+  color: var(--accent-2);
+  font-variant-numeric: tabular-nums;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 26px;
+}
+.process-step h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.process-step p {
+  font-size: 14.5px;
+  color: rgba(230, 230, 227, 0.62);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+/* ─── Talent coverage ─── */
+.coverage-section {
+  background: var(--ivory);
+}
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+.coverage-col h3 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--accent);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.coverage-col ul {
+  list-style: none;
+}
+.coverage-col li {
+  font-size: 16px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.coverage-col li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 /* ─── About (editorial) ─── */
@@ -679,10 +895,67 @@ section.block {
   line-height: 1.45;
 }
 
+/* ─── Solutions overview cards ─── */
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.solution-card {
+  background: var(--paper);
+  padding: 44px 38px 40px;
+}
+.solution-card .sc-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 30px;
+}
+.solution-card h3 {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.solution-card h3 em {
+  font-style: italic;
+}
+.solution-card p {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.55;
+  margin-bottom: 26px;
+}
+.solution-card .explore {
+  font-size: 14px;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s, border-color 0.2s;
+}
+.solution-card .explore:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ─── Services expanded (inner page) ─── */
 .svc-expanded {
   padding: 80px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 112px;
 }
 .svc-expanded:last-child {
   border-bottom: none;
@@ -1258,6 +1531,24 @@ section.block {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+  .solution-cards {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+  .coverage-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   .split-grid {
     grid-template-columns: 1fr;
   }
@@ -1322,6 +1613,12 @@ section.block {
   }
   .vals {
     grid-template-columns: 1fr;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  .coverage-grid {
+    gap: 32px;
   }
   .team-grid {
     grid-template-columns: 1fr;

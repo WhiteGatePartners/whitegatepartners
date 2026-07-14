@@ -43,7 +43,7 @@ export default async function AboutPage() {
       {/* PAGE HERO */}
       <section className="pg-hero">
         <div className="wrap">
-          <span className="kick">The firm</span>
+          <span className="kick">Who we are</span>
           <h1>
             Built on judgement, <em>not transaction.</em>
           </h1>
@@ -51,6 +51,13 @@ export default async function AboutPage() {
             A Singapore-based partnership founded on the conviction that great
             hiring demands the same rigour as great strategy — and that the two
             should never be separated.
+          </p>
+          <p className="lede">
+            White Gate Partners is a Singapore-based executive search,
+            specialist recruitment and talent solutions firm established on a
+            simple belief: great hiring requires business context, market
+            understanding and careful judgement — not transactional
+            recruitment.
           </p>
         </div>
       </section>
@@ -70,20 +77,22 @@ export default async function AboutPage() {
               <span className="tab">Our story</span>
             </div>
             <div>
-              <h2>
-                A practice for the <em>next generation of teams.</em>
-              </h2>
+              <h2>Beyond the Brief, Into the Business.</h2>
               <p>
-                White Gate Partners was founded in January 2026 with a clear
-                purpose: to offer Singapore&apos;s growing organisations a
-                different kind of recruitment partner. One that asks harder
-                questions, moves more deliberately, and stays longer.
+                White Gate Partners is a Singapore-based executive search,
+                specialist recruitment and talent solutions firm established
+                to offer companies a more considered recruitment partner —
+                one that asks better questions, moves with purpose and
+                maintains hands-on involvement from briefing to outcome.
               </p>
               <p>
-                We work at the intersection of hiring and strategy — helping
-                both startups finding their footing and multinationals
-                navigating complexity to attract, structure and retain the
-                people who carry them forward.
+                We work with clients beyond single transactions, building
+                long-term partnerships that support different stages of
+                growth, hiring and talent needs. With a lean boutique model,
+                we are able to keep senior-level involvement close to each
+                engagement while remaining commercially flexible in how we
+                structure our work around client priorities, business context
+                and market realities.
               </p>
               <p>
                 Our name refers to the moment of judgement at the threshold —
@@ -92,20 +101,20 @@ export default async function AboutPage() {
               </p>
               <dl className="about-dl">
                 <div>
-                  <dt>Founded</dt>
-                  <dd>1 January 2026</dd>
+                  <dt>Licensed</dt>
+                  <dd>EA Comprehensive Licence</dd>
                 </div>
                 <div>
-                  <dt>Headquarters</dt>
-                  <dd>The Iveria · Kim Yam Road</dd>
+                  <dt>Solutions</dt>
+                  <dd>Executive search · Specialist recruitment · Talent solutions</dd>
                 </div>
                 <div>
-                  <dt>Entity</dt>
-                  <dd>White Gate Partners Pte. Ltd.</dd>
+                  <dt>Partnership</dt>
+                  <dd>Building long term client relationships</dd>
                 </div>
                 <div>
-                  <dt>UEN</dt>
-                  <dd>202600064K</dd>
+                  <dt>Engagement</dt>
+                  <dd>Clear ownership from briefing through delivery</dd>
                 </div>
               </dl>
             </div>
@@ -120,12 +129,21 @@ export default async function AboutPage() {
             <span className="num">§ 01</span>
             <div>
               <h2>
-                Partners and consultants who <em>know the market.</em>
+                Experienced talent professionals with{" "}
+                <em>market depth.</em>
               </h2>
               <p className="sub">
-                Every member of our team has spent years embedded in
-                Singapore&apos;s talent ecosystem — as recruiters, as HR
-                leaders, or as the hiring managers themselves.
+                Our work is shaped by years of client delivery, candidate
+                engagement and regional market experience across different
+                sectors, functions and stages of growth. We look beyond the
+                role brief to understand the wider business context, whether
+                supporting leadership hiring, specialist recruitment, market
+                mapping, project recruitment or broader talent needs.
+              </p>
+              <p className="sub">
+                Clients work directly with the people leading each
+                engagement, not layers of junior consultants removed from the
+                brief.
               </p>
             </div>
           </div>
@@ -169,43 +187,45 @@ export default async function AboutPage() {
                 What we believe about hiring — <em>and people.</em>
               </h2>
               <p className="sub">
-                Four principles that shape every search, every piece of advice,
-                and every relationship we build.
+                Four principles that shape the way we approach search,
+                recruitment, talent advice and long-term client
+                relationships.
               </p>
             </div>
           </div>
           <div className="vals">
             <div className="val-card">
               <div className="vn">i</div>
-              <h3>Rigour before speed</h3>
+              <h3>Judgement before volume</h3>
               <p>
-                A wrong hire costs far more than a longer search. We never
-                sacrifice process to fill a deadline.
+                We do not measure value by the number of CVs sent. We focus
+                on relevance, context and the quality of each conversation.
               </p>
             </div>
             <div className="val-card">
               <div className="vn">ii</div>
-              <h3>Honesty above comfort</h3>
+              <h3>Candour over comfort</h3>
               <p>
-                We tell clients when a brief is unrealistic and candidates when
-                a role isn&apos;t right. That&apos;s the only way trust
-                compounds.
+                We give practical feedback when a brief, salary range or
+                candidate fit needs to be reconsidered. Honest advice helps
+                clients make better decisions.
               </p>
             </div>
             <div className="val-card">
               <div className="vn">iii</div>
-              <h3>Partnership, not transaction</h3>
+              <h3>Partnership beyond the hire</h3>
               <p>
-                We measure our success by where the people we place are in
-                three years — not three weeks after joining.
+                We aim to build long-term client relationships, supporting
+                hiring and talent needs across different stages of growth.
               </p>
             </div>
             <div className="val-card">
               <div className="vn">iv</div>
-              <h3>Singapore-first perspective</h3>
+              <h3>Market context in every recommendation</h3>
               <p>
-                The nuances of this market — cultural, regulatory, competitive
-                — are built into every recommendation we make.
+                Every recommendation is shaped by real market conditions —
+                candidate availability, compensation expectations, cultural
+                fit and regional hiring dynamics.
               </p>
             </div>
           </div>
@@ -218,21 +238,17 @@ export default async function AboutPage() {
           <div className="cta-inner">
             <div>
               <h2>
-                Work with a team that <em>knows the difference.</em>
+                Work with people who <em>understand the difference.</em>
               </h2>
               <p>
-                Whether you are hiring, seeking career counsel, or need
-                strategic HR support — we are ready to talk.
+                Whether you are hiring, reviewing broader talent needs or
+                exploring client referral incentives or independent recruiter
+                collaborations, we&apos;d welcome the conversation.
               </p>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16, flexShrink: 0 }}>
-              <Link className="biglink" href="/contact" style={{ maxWidth: 320 }}>
-                Get in touch <span className="ar">→</span>
-              </Link>
-              <Link className="biglink" href="/careers" style={{ maxWidth: 320 }}>
-                Join our team <span className="ar">→</span>
-              </Link>
-            </div>
+            <Link className="biglink" href="/contact" style={{ maxWidth: 320, flexShrink: 0 }}>
+              Get in touch <span className="ar">→</span>
+            </Link>
           </div>
         </div>
       </section>

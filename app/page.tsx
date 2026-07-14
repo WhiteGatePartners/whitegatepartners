@@ -64,26 +64,9 @@ export default function Home() {
               priority
               style={{ objectFit: "cover" }}
             />
-            <span className="cap">The work of building a team</span>
           </div>
         </div>
       </section>
-
-      {/* INDUSTRIES STRIP */}
-      <div className="strip">
-        <div className="wrap">
-          <div className="strip-inner">
-            <span className="strip-lead">Searches we run across —</span>
-            <div className="strip-tags">
-              <span>Accounting &amp; Finance</span>
-              <span>Compliance &amp; Risk</span>
-              <span>Sales &amp; Commercial</span>
-              <span>Startups to MNCs</span>
-              <span>HR &amp; Operations</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* SERVICES */}
       <section className="block" id="services">
@@ -91,13 +74,14 @@ export default function Home() {
           <div className="head">
             <div>
               <h2>
-                Three practices that{" "}
-                <em>answer to one another.</em>
+                Three solutions, delivered with{" "}
+                <em>experience and accountability.</em>
               </h2>
               <p className="sub">
-                We pair a recruiter&apos;s reach with a consultant&apos;s
-                rigour — so the people we place and the strategy we shape pull
-                in the same direction.
+                We begin by understanding each client&apos;s business and
+                talent needs clearly. Once engaged, we stay close to the work
+                and follow through with market insight, targeted outreach and
+                clear communication.
               </p>
             </div>
           </div>
@@ -109,15 +93,16 @@ export default function Home() {
               </h3>
               <div className="body">
                 <p>
-                  Retained and exclusive searches for the leaders who define a
-                  function — directors, department heads and C-suite
-                  appointments.
+                  Bespoke search for senior, confidential and business-critical
+                  roles, supported by targeted market mapping, discreet
+                  outreach and careful assessment.
                 </p>
                 <div className="ts">
-                  <b>C-Suite &amp; Board</b>
+                  <b>Leadership Hiring</b>
                   <b>Functional Heads</b>
-                  <b>Retained</b>
-                  <b>Permanent</b>
+                  <b>C-suite Search</b>
+                  <b>Confidential Search</b>
+                  <b>Regional Search</b>
                 </div>
               </div>
             </div>
@@ -128,16 +113,17 @@ export default function Home() {
               </h3>
               <div className="body">
                 <p>
-                  Qualified professionals placed with precision — from
-                  mid-level practitioners to senior specialists across Finance,
-                  Compliance, Sales and more.
+                  Structured specialist recruitment for professional,
+                  specialist and mid-to-senior roles, built around market
+                  knowledge, candidate pipelines and practical delivery
+                  models.
                 </p>
                 <div className="ts">
-                  <b>Accounting</b>
-                  <b>Compliance</b>
-                  <b>Sales</b>
-                  <b>Permanent</b>
-                  <b>Contract</b>
+                  <b>Professional Hiring</b>
+                  <b>Specialist Talent</b>
+                  <b>Mid-to-Senior Roles</b>
+                  <b>Commercial &amp; Corporate</b>
+                  <b>Technical Functions</b>
                 </div>
               </div>
             </div>
@@ -148,15 +134,17 @@ export default function Home() {
               </h3>
               <div className="body">
                 <p>
-                  Advisory and consulting beyond the brief — hiring strategy,
-                  org design, salary benchmarking and HR operating models for
-                  scaling teams.
+                  Agile and scalable talent solutions designed around
+                  evolving business needs, including contract hiring, project
+                  recruitment, market mapping, hiring advisory and regional
+                  talent intelligence.
                 </p>
                 <div className="ts">
-                  <b>Hiring strategy</b>
-                  <b>Salary mapping</b>
-                  <b>Org design</b>
-                  <b>HR models</b>
+                  <b>Contract Hiring</b>
+                  <b>Project Recruitment</b>
+                  <b>Market Mapping</b>
+                  <b>Hiring Advisory</b>
+                  <b>Talent Intelligence</b>
                 </div>
               </div>
             </div>
@@ -173,110 +161,142 @@ export default function Home() {
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section className="block approach-section" id="approach">
+      {/* WHO WE SUPPORT */}
+      <section className="block support-section" id="who-we-support">
         <div className="wrap">
           <div className="head">
             <div>
+              <span className="eyebrow">Who we support</span>
               <h2>
-                How we <em>work.</em>
+                Supporting companies across growth stages, markets and{" "}
+                <em>expansion</em> needs.
               </h2>
               <p className="sub">
-                We measure ourselves by the careers we shape and the teams that
-                endure — not by the volume of CVs we send.
+                We work with startups, SMEs, regional businesses,
+                multinational companies, and China-linked or international
+                companies expanding across Southeast Asia and selected
+                cross-border markets to identify and secure professional,
+                specialist and leadership talent.
               </p>
             </div>
           </div>
-          <div className="vals">
-            <div className="val-card">
-              <div className="vn">i</div>
-              <h3>Precision over volume</h3>
+          <div className="support-grid">
+            <div className="support-card">
+              <span className="sn">01</span>
+              <h3>Startups &amp; Scale-ups</h3>
               <p>
-                The right few, not the available many. Every introduction is
-                deliberate.
+                For growing companies building early leadership, commercial,
+                operational or specialist teams where every hire has direct
+                business impact.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">ii</div>
-              <h3>Local depth, global reach</h3>
+            <div className="support-card">
+              <span className="sn">02</span>
+              <h3>SMEs &amp; Founder-led Businesses</h3>
               <p>
-                Rooted in Singapore&apos;s market, fluent in multinational
-                expectations.
+                For established local and regional businesses strengthening
+                management teams, professionalising functions or hiring for
+                business-critical roles.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">iii</div>
-              <h3>Long-term partnership</h3>
+            <div className="support-card">
+              <span className="sn">03</span>
+              <h3>New Market Entrants &amp; Regional Expansion</h3>
               <p>
-                We learn your business so each hire compounds your momentum.
+                For companies entering or scaling across Southeast Asia that
+                need local market understanding, cross-border hiring support
+                and access to regional talent.
               </p>
             </div>
-            <div className="val-card">
-              <div className="vn">iv</div>
-              <h3>Discretion &amp; integrity</h3>
+            <div className="support-card">
+              <span className="sn">04</span>
+              <h3>Regional Businesses &amp; Multinational Organisations</h3>
               <p>
-                Confidential searches; candidates treated as peers, always.
+                For larger or multi-market organisations seeking discreet
+                search, specialist recruitment or targeted support for
+                leadership, functional and niche professional roles.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="block about-home" id="about">
+      {/* WHY WHITE GATE PARTNERS */}
+      <section className="block why-section" id="why-white-gate">
         <div className="wrap">
-          <div className="about-grid">
-            <div className="about-ph">
+          <div className="why-grid">
+            <div className="why-ph">
               <Image
-                src="/business.jpeg"
-                alt="A White Gate professional"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1100&q=80&auto=format&fit=crop"
+                alt="White Gate Partners team at work"
                 fill
-                sizes="50vw"
+                sizes="45vw"
                 style={{ objectFit: "cover" }}
               />
-              <span className="tab">The firm</span>
             </div>
             <div>
-              <h2>
-                A Singapore practice for the{" "}
-                <em>next generation of teams.</em>
+              <span className="eyebrow">Why White Gate Partners</span>
+              <h2 className="why-h2">
+                Experience, market insight and accountable{" "}
+                <em>follow-through.</em>
               </h2>
-              <p>
-                White Gate Partners works at the seam between hiring and
-                strategy — helping growing startups and established
-                multinationals attract, structure and keep the people who carry
-                them forward.
+              <p className="why-lede">
+                We bring senior-level talent experience, practical market
+                understanding and regional hiring exposure to each client
+                engagement. Whether supporting a leadership search, specialist
+                role or broader talent project, we take time to understand the
+                business context, engage the right talent and communicate
+                clearly throughout the process.
               </p>
-              <p>
-                We were founded on a simple conviction: great hiring is an act
-                of judgement, not transaction. So we operate as a partner, not
-                a vendor.
-              </p>
-              <dl className="about-dl">
-                {/* <div>
-                  <dt>Founded</dt>
-                  <dd>1 January 2026</dd>
+              <div className="why-points">
+                <div className="why-point">
+                  <span className="wn">01</span>
+                  <div>
+                    <h4>Experienced Talent Professionals</h4>
+                    <p>
+                      Senior-level experience across search, recruitment and
+                      talent solutions.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <dt>Located</dt>
-                  <dd>The Iveria · Kim Yam Road</dd>
-                </div> */}
-                <div>
-                  <dt>Entity</dt>
-                  <dd>White Gate Partners Pte. Ltd.</dd>
+                <div className="why-point">
+                  <span className="wn">02</span>
+                  <div>
+                    <h4>Regional &amp; Cross-Border Reach</h4>
+                    <p>
+                      Singapore-based, with hiring experience and partner
+                      reach across Southeast Asia, China and selected
+                      international markets.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <dt>UEN</dt>
-                  <dd>202600064K</dd>
+                <div className="why-point">
+                  <span className="wn">03</span>
+                  <div>
+                    <h4>Practical Market Understanding</h4>
+                    <p>
+                      Guidance informed by candidate conversations, market
+                      mapping, compensation expectations and local hiring
+                      conditions.
+                    </p>
+                  </div>
                 </div>
-              </dl>
-              <div style={{ marginTop: 36 }}>
-                <Link
-                  className="biglink"
-                  href="/about"
-                  style={{ maxWidth: 340 }}
-                >
-                  Meet the team <span className="ar">→</span>
+                <div className="why-point">
+                  <span className="wn">04</span>
+                  <div>
+                    <h4>Accountable Follow-Through</h4>
+                    <p>
+                      Once engaged, we stay close to the work with clear
+                      communication, targeted outreach and practical
+                      feedback.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="why-cta">
+                <span className="t">For employers</span>
+                <Link className="biglink" href="/contact" style={{ maxWidth: 320 }}>
+                  Discuss your talent needs <span className="ar">→</span>
                 </Link>
               </div>
             </div>
@@ -284,53 +304,138 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AUDIENCE SPLIT */}
-      <section className="block split-section" id="audience">
+      {/* HOW WE WORK */}
+      <section className="block process-section" id="how-we-work">
         <div className="wrap">
           <div className="head">
             <div>
+              <span className="eyebrow on-dark">How we work</span>
               <h2>
-                Whichever side of the gate{" "}
-                <em>you stand on.</em>
+                A clear <em>process</em>, adapted to each search or talent
+                project.
               </h2>
+              <p className="sub">
+                Every engagement starts with context. We define what success
+                looks like, map the relevant market, engage the right talent
+                and stay close to the process from briefing to decision.
+              </p>
             </div>
           </div>
-          <div className="split-grid">
-            <div className="aud">
-              <span className="t">For Employers</span>
-              <h3>
-                Build the team <em>behind the growth.</em>
-              </h3>
+          <div className="process-grid">
+            <div className="process-step">
+              <span className="pn">01</span>
+              <h3>Understand the Context</h3>
               <p>
-                From a first compliance lead to a full commercial function —
-                people who fit the role and the future, plus the counsel to keep
-                them.
+                We clarify the business need, role requirements, team
+                structure, reporting line, compensation range, success
+                profile and organisational context before starting the work.
               </p>
-              <Link className="biglink" href="/contact">
-                Start a search <span className="ar">→</span>
-              </Link>
             </div>
-            <div className="aud">
-              <span className="t">For Candidates</span>
-              <h3>
-                Find the move <em>worth making.</em>
-              </h3>
+            <div className="process-step">
+              <span className="pn">02</span>
+              <h3>Map the Market</h3>
               <p>
-                We represent you to organisations worth your ambition — honest
-                counsel, total discretion, a real read on where you&apos;ll do
-                your best work.
+                We identify relevant companies, talent pools, candidate
+                segments and market conditions across Singapore, Southeast
+                Asia or selected international markets.
               </p>
-              <Link className="biglink" href="/contact">
-                Introduce yourself <span className="ar">→</span>
-              </Link>
+            </div>
+            <div className="process-step">
+              <span className="pn">03</span>
+              <h3>Engage the Right Talent</h3>
+              <p>
+                We approach suitable candidates directly and professionally,
+                including passive talent who may not be actively looking.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">04</span>
+              <h3>Assess Fit and Motivation</h3>
+              <p>
+                We evaluate experience, capability, motivation, communication
+                style, compensation expectations, cultural alignment and fit
+                with the organisation&apos;s environment.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">05</span>
+              <h3>Support the Decision</h3>
+              <p>
+                We manage feedback, interview coordination, offer discussions
+                and practical follow-through until the assignment or project
+                reaches a clear outcome.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* QUOTES */}
+      {/* TALENT COVERAGE */}
+      <section className="block coverage-section" id="talent-coverage">
+        <div className="wrap">
+          <div className="head">
+            <div>
+              <span className="eyebrow">Talent coverage</span>
+              <h2>
+                Hiring and talent coverage across selected markets, sectors
+                and functions.
+              </h2>
+              <p className="sub">
+                White Gate Partners supports search, recruitment and talent
+                assignments across selected markets, business-critical
+                sectors and specialist functions where targeted talent access
+                and market understanding matter.
+              </p>
+            </div>
+          </div>
+          <div className="coverage-grid">
+            <div className="coverage-col">
+              <h3>Markets</h3>
+              <ul>
+                <li>Singapore</li>
+                <li>Malaysia</li>
+                <li>Southeast Asia</li>
+                <li>China</li>
+                <li>Europe</li>
+                <li>Selected international markets</li>
+              </ul>
+            </div>
+            <div className="coverage-col">
+              <h3>Sector Coverage</h3>
+              <ul>
+                <li>Technology &amp; AI</li>
+                <li>Life Sciences &amp; Healthcare</li>
+                <li>Manufacturing &amp; Semiconductor</li>
+                <li>Supply Chain &amp; Logistics</li>
+                <li>Financial Services &amp; Insurance</li>
+                <li>Professional Services</li>
+                <li>Chemicals &amp; Specialty Materials</li>
+                <li>Energy &amp; Renewables</li>
+              </ul>
+            </div>
+            <div className="coverage-col">
+              <h3>Functional Coverage</h3>
+              <ul>
+                <li>Leadership &amp; General Management</li>
+                <li>Sales &amp; Commercial</li>
+                <li>Finance &amp; Accounting</li>
+                <li>Legal, Compliance &amp; Risk</li>
+                <li>HR &amp; Operations</li>
+                <li>Technology &amp; Engineering</li>
+                <li>Supply Chain &amp; Procurement</li>
+                <li>Regulatory, Quality &amp; Clinical</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT CLIENTS SAY */}
       <section className="block quotes-section">
         <div className="wrap">
+          <span className="kick" style={{ display: "block", textAlign: "center", marginBottom: 40 }}>
+            What clients say
+          </span>
           <div className="pull">
             <span className="qmark">&ldquo;</span>
             <blockquote>
@@ -394,8 +499,9 @@ export default function Home() {
                 Let&apos;s talk about <em>who you need next.</em>
               </h2>
               <p>
-                Hiring, scaling a function, or weighing your own next move —
-                we&apos;d welcome the conversation.
+                Whether you are planning a leadership search, scaling a
+                function or reviewing broader talent needs, we&apos;d
+                welcome the conversation.
               </p>
             </div>
             <Link className="biglink" href="/contact" style={{ maxWidth: 340, flexShrink: 0 }}>
