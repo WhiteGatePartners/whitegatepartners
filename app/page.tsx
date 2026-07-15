@@ -47,11 +47,8 @@ export default function Home() {
               supporting regional and cross-border hiring across Southeast Asia and selected international markets.
             </p>
             <div className="hero-actions">
-              <Link className="biglink" href="/services">
-                For employers <span className="ar">→</span>
-              </Link>
               <Link className="biglink" href="/contact">
-                For candidates <span className="ar">→</span>
+                Get in touch <span className="ar">→</span>
               </Link>
             </div>
           </div>
@@ -227,7 +224,7 @@ export default function Home() {
           <div className="why-grid">
             <div className="why-ph">
               <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1100&q=80&auto=format&fit=crop"
+                src="/business.jpeg"
                 alt="White Gate Partners team at work"
                 fill
                 sizes="45vw"

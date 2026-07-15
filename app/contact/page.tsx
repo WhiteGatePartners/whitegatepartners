@@ -30,11 +30,12 @@ export default function ContactPage() {
         <div className="wrap">
           <span className="kick">Get in touch</span>
           <h1>
-            Let&apos;s talk about <em>who you need next.</em>
+            Start the <em>right conversation.</em>
           </h1>
           <p className="lede">
-            Hiring, scaling a function, or weighing your own next move — we
-            would welcome the conversation.
+            Whether you are hiring, exploring a partnership or simply want to
+            understand how White Gate Partners may be able to support your
+            talent needs, we&apos;d welcome the conversation.
           </p>
         </div>
       </section>
@@ -48,20 +49,20 @@ export default function ContactPage() {
                 A conversation costs <em>nothing.</em>
               </h2>
               <p className="lede">
-                We respond to all enquiries within one business day and are
-                always happy to have an exploratory call — even if you&apos;re
-                not sure yet what you need.
+                We aim to respond to all enquiries within one business day
+                and are happy to have an exploratory conversation — even if
+                you are still shaping what you need.
               </p>
               <div className="contact-info">
                 <div className="r">
-                  <div className="k">Office</div>
-                  <b>The Iveria, 2 Kim Yam Road, Singapore 239366</b>
+                  <div className="k">Location</div>
+                  <b>Singapore-based · Meetings by appointment</b>
                 </div>
                 <div className="r">
                   <div className="k">Email</div>
                   <b>
-                    <a href="mailto:hello@whitegatepartners.sg">
-                      hello@whitegatepartners.sg
+                    <a href="mailto:asher@whitegatepartners.co">
+                      asher@whitegatepartners.co
                     </a>
                   </b>
                 </div>
@@ -71,7 +72,11 @@ export default function ContactPage() {
                 </div>
                 <div className="r">
                   <div className="k">Entity</div>
-                  <b>White Gate Partners Pte. Ltd. · UEN 202600064K</b>
+                  <b>
+                    White Gate Partners Pte. Ltd. · UEN 202600064K
+                    <br />
+                    EA Licence No. 26C3291
+                  </b>
                 </div>
                 <div className="r">
                   <div className="k">Connect</div>
@@ -81,51 +86,6 @@ export default function ContactPage() {
             </div>
 
             <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* LOCATION */}
-      <section
-        className="block"
-        style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}
-      >
-        <div className="wrap">
-          <div className="head">
-            <span className="num">§ 01</span>
-            <div>
-              <h2>
-                Find us at <em>The Iveria.</em>
-              </h2>
-              <p className="sub">
-                We are in the River Valley district of Singapore, a short walk
-                from Clarke Quay MRT. Visitor parking is available in the
-                building.
-              </p>
-            </div>
-          </div>
-          <div
-            style={{
-              background: "var(--grey-mid)",
-              height: 280,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  fontFamily: "var(--font-newsreader), Georgia, serif",
-                  fontSize: 13,
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.6)",
-                }}
-              >
-                The Iveria · 2 Kim Yam Road · Singapore 239366
-              </div>
-            </div>
           </div>
         </div>
       </section>

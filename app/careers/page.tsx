@@ -1,196 +1,179 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers | Join White Gate Partners Singapore",
+  title: "Partnerships | Collaborate with White Gate Partners Singapore",
   description:
-    "Join White Gate Partners as a recruitment consultant or talent advisor in Singapore. Build your career in executive search and specialist recruitment with a growing boutique firm. Open roles based in Singapore.",
+    "Partner with White Gate Partners as a client referrer, CEI-certified independent recruiter or fractional HR and talent leader. Collaborate on client introductions, specialist recruitment delivery and talent solutions projects across Singapore and Southeast Asia.",
   keywords: [
-    "recruitment consultant jobs Singapore",
-    "talent advisor jobs Singapore",
-    "executive search careers Singapore",
-    "careers White Gate Partners",
-    "headhunter jobs Singapore",
+    "recruitment partnership Singapore",
+    "client referral programme Singapore",
+    "independent recruiter collaboration Singapore",
+    "fractional HR Singapore",
+    "recruitment referral incentive Singapore",
   ],
   openGraph: {
-    title: "Careers at White Gate Partners",
+    title: "Partnerships | White Gate Partners",
     description:
-      "Join our growing team in Singapore. Open roles in executive search and specialist recruitment.",
+      "Collaborate through trusted referrals, independent recruitment delivery and fractional talent expertise.",
     url: "https://whitegatepartners.sg/careers",
   },
   alternates: { canonical: "https://whitegatepartners.sg/careers" },
 };
 
-const benefits = [
+const routes = [
   {
     n: "01",
-    title: "Partner-level mentorship",
-    desc: "Every consultant works directly with a partner on live searches — you learn by doing, with someone alongside you.",
+    title: "Client Referral Incentives",
+    body: "For senior professionals, HR practitioners, advisors and well-connected individuals who can introduce companies with hiring or talent needs.",
+    body2:
+      "Eligible referrals may qualify for a referral incentive, subject to prior agreement, eligibility and successful engagement terms.",
+    fit: "Trusted introducers with employer, leadership or HR contacts.",
   },
   {
     n: "02",
-    title: "Clear progression",
-    desc: "From Consultant to Senior Consultant to Principal to Partner — a transparent path with defined milestones, not vague promises.",
+    title: "Independent Recruiter Collaborations",
+    body: "For CEI-certified independent recruiters with specialist market knowledge, candidate access or recruitment delivery capability.",
+    body2:
+      "This may suit recruiters seeking greater flexibility, discretion and ownership, including those looking to move away from more KPI-driven or highly structured environments.",
+    fit: "Experienced recruiters who want to collaborate on selected mandates without a traditional agency structure.",
   },
   {
     n: "03",
-    title: "Competitive package",
-    desc: "A strong base, performance-linked commission and benefits benchmarked against the top tier of Singapore's professional services market.",
-  },
-  {
-    n: "04",
-    title: "Small team, real impact",
-    desc: "In a firm our size, your work is visible. Good ideas are heard and great work is noticed — by partners and clients alike.",
-  },
-  {
-    n: "05",
-    title: "Thoughtful culture",
-    desc: "We work hard on interesting problems. We do not celebrate busyness for its own sake or reward volume over quality.",
-  },
-  {
-    n: "06",
-    title: "Singapore & beyond",
-    desc: "Based in the heart of Singapore, with growing exposure to regional clients across Southeast Asia and the wider APAC market.",
+    title: "Fractional HR & Talent Leaders",
+    body: "For senior HR, talent acquisition and people leaders open to supporting future talent solutions projects on a fractional, advisory or project basis.",
+    body2:
+      "This may include hiring advisory, talent market mapping, recruitment project support, TA process review, workforce planning or broader talent-related initiatives where experienced practitioner input is required.",
+    fit: "Senior HR, TA or talent leaders open to project-based or fractional advisory work.",
   },
 ];
 
-export default function CareersPage() {
+export default function PartnershipsPage() {
   return (
     <>
       {/* PAGE HERO */}
       <section className="pg-hero">
         <div className="wrap">
-          <span className="kick">Join us</span>
+          <span className="kick">Partner with us</span>
           <h1>
             Shape the future of <em>work — from the inside.</em>
           </h1>
           <p className="lede">
-            We are building a firm that thinks differently about talent. If you
-            want to do recruitment and advisory work that actually matters, we
-            would like to meet you.
+            Collaborate through trusted referrals, independent recruitment
+            delivery and fractional talent expertise.
+          </p>
+          <p className="lede">
+            White Gate Partners works with trusted referrers, CEI-certified
+            independent recruiters and senior HR or talent practitioners who
+            can support client introductions, selected search assignments and
+            future talent solutions projects across Singapore, Southeast Asia
+            and selected international markets.
           </p>
         </div>
       </section>
 
-      {/* CULTURE */}
-      <section className="block about-home">
-        <div className="wrap">
-          <div className="about-grid">
-            <div className="about-ph">
-              <Image
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1100&q=80&auto=format&fit=crop"
-                alt="The White Gate Partners team"
-                fill
-                sizes="50vw"
-                style={{ objectFit: "cover" }}
-              />
-              <span className="tab">Our culture</span>
-            </div>
-            <div>
-              <h2>
-                Rigorous people doing <em>rigorous work.</em>
-              </h2>
-              <p>
-                We hire consultants the same way we place them — deliberately.
-                We are not looking for volume-driven recruiters who want to
-                send as many CVs as possible. We are looking for people who
-                find the work itself interesting.
-              </p>
-              <p>
-                White Gate Partners is a small team, which means the work you
-                do will be visible and the relationships you build will be
-                real. There is no hiding in the middle of a 200-person desk.
-              </p>
-              <p>
-                We value curiosity, intellectual honesty and the ability to
-                disagree well. If that sounds like the kind of place you want
-                to work, read on.
-              </p>
-              <Link
-                className="biglink"
-                href="/openings"
-                style={{ display: "inline-flex", marginTop: 32 }}
-              >
-                See current openings <span className="ar">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFITS */}
-      <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
+      {/* PARTNERSHIP ROUTES */}
+      <section className="block">
         <div className="wrap">
           <div className="head">
             <span className="num">§ 01</span>
             <div>
-              <h2>
-                What we offer the <em>people who join us.</em>
-              </h2>
+              <h2>Three partnership routes.</h2>
               <p className="sub">
-                We have tried to build the environment we would have wanted
-                when we were starting out.
+                White Gate Partners collaborates with trusted referrers,
+                CEI-certified independent recruiters and senior HR or talent
+                practitioners who can add value through client introductions,
+                specialist recruitment delivery or project-based talent
+                support. Each arrangement is governed by a signed agreement
+                that sets out the scope, expectations and commercial terms
+                before work begins.
               </p>
             </div>
           </div>
-          <div className="benefits-grid">
-            {benefits.map((b) => (
-              <div className="benefit" key={b.n}>
-                <div className="bn">{b.n}</div>
-                <h3>{b.title}</h3>
-                <p>{b.desc}</p>
+          <div className="route-cards">
+            {routes.map((r) => (
+              <div className="route-card" key={r.n}>
+                <span className="sc-num">{r.n}</span>
+                <h3>{r.title}</h3>
+                <p>{r.body}</p>
+                <p>{r.body2}</p>
+                <div className="route-fit">
+                  <span className="label">Best suited for</span>
+                  <p>{r.fit}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="block approach-section">
+      {/* HOW PARTNERSHIPS WORK */}
+      <section className="block process-section">
         <div className="wrap">
           <div className="head">
             <span className="num">§ 02</span>
             <div>
-              <h2>
-                The qualities that <em>matter most here.</em>
-              </h2>
-            </div>
-          </div>
-          <div className="vals">
-            <div className="val-card">
-              <div className="vn">i</div>
-              <h3>Intellectual curiosity</h3>
-              <p>
-                You want to understand the businesses and people you work with
-                — not just fill a brief.
-              </p>
-            </div>
-            <div className="val-card">
-              <div className="vn">ii</div>
-              <h3>Commercial instinct</h3>
-              <p>
-                You understand that the firm needs to grow and you see your
-                role in making that happen.
-              </p>
-            </div>
-            <div className="val-card">
-              <div className="vn">iii</div>
-              <h3>Honest communication</h3>
-              <p>
-                You say what you think — to colleagues, clients and candidates
-                — even when it is not the easy thing to say.
-              </p>
-            </div>
-            <div className="val-card">
-              <div className="vn">iv</div>
-              <h3>Long-term thinking</h3>
-              <p>
-                You care about the reputation you build over years, not just
-                the numbers you hit this quarter.
+              <span className="eyebrow on-dark">How it works</span>
+              <h2>How partnership arrangements work.</h2>
+              <p className="sub">
+                Partnership arrangements are discussed upfront, documented
+                clearly and managed with professional expectations on both
+                sides.
               </p>
             </div>
           </div>
+          <div className="process-grid cols-4">
+            <div className="process-step">
+              <span className="pn">i</span>
+              <h3>Initial conversation</h3>
+              <p>
+                We understand the referral, recruiter collaboration or
+                talent solutions opportunity, including the background,
+                market focus and potential fit with White Gate Partners.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">ii</span>
+              <h3>Agree the arrangement</h3>
+              <p>
+                Scope, responsibilities, eligibility, confidentiality
+                expectations and commercial terms are agreed upfront through
+                a signed agreement.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">iii</span>
+              <h3>Deliver the collaboration</h3>
+              <p>
+                Each partner contributes according to the agreed
+                arrangement, whether through client introductions, client
+                ownership, candidate delivery or project-based support.
+                Roles, communication standards and responsibilities are kept
+                clear throughout the process.
+              </p>
+            </div>
+            <div className="process-step">
+              <span className="pn">iv</span>
+              <h3>Follow through clearly</h3>
+              <p>
+                Referral incentives, recruiter collaboration fees or
+                project-related terms are handled according to the signed
+                agreement and agreed milestones.
+              </p>
+            </div>
+          </div>
+          <p className="legal-fineprint">
+            All partnership arrangements are subject to eligibility, prior
+            agreement and signed terms. Referral incentives, recruiter
+            collaboration fees and project-related payments must not create
+            any conflict of interest, improper inducement, bribery or breach
+            of duty with any referred organisation, client, candidate or
+            third party. Partners are expected to maintain confidentiality,
+            handle information appropriately, communicate professionally,
+            act only within the agreed scope and comply with applicable
+            laws, regulations, employment agency requirements, data
+            protection obligations and market-specific compliance standards.
+          </p>
         </div>
       </section>
 
@@ -200,21 +183,18 @@ export default function CareersPage() {
           <div className="cta-inner">
             <div>
               <h2>
-                Ready to <em>take a look?</em>
+                Let&apos;s explore how we can <em>collaborate.</em>
               </h2>
               <p>
-                Browse our open roles or introduce yourself — we are always
-                interested in exceptional people.
+                Whether you are introducing a company with hiring needs,
+                collaborating as an independent recruiter or open to
+                supporting future HR and talent projects, we&apos;d welcome
+                the conversation.
               </p>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16, flexShrink: 0 }}>
-              <Link className="biglink" href="/openings" style={{ maxWidth: 340 }}>
-                Current openings <span className="ar">→</span>
-              </Link>
-              <Link className="biglink" href="/contact" style={{ maxWidth: 340 }}>
-                Introduce yourself <span className="ar">→</span>
-              </Link>
-            </div>
+            <Link className="biglink" href="/contact" style={{ maxWidth: 340, flexShrink: 0 }}>
+              Get in touch <span className="ar">→</span>
+            </Link>
           </div>
         </div>
       </section>

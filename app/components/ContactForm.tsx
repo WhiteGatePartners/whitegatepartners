@@ -69,8 +69,11 @@ export default function ContactForm() {
           SERVICE_ID,
           TEMPLATE_ID,
           {
+            type: data.get("type") as string,
             name: data.get("name") as string,
             email: data.get("email") as string,
+            phone: data.get("phone") as string,
+            company: data.get("company") as string,
             message: data.get("message") as string,
           },
           { publicKey: PUBLIC_KEY }
@@ -92,9 +95,10 @@ export default function ContactForm() {
         <label htmlFor="type">I am a&hellip;</label>
         <select id="type" name="type">
           <option>An employer looking to hire</option>
-          <option>A candidate exploring opportunities</option>
-          <option>Exploring advisory or consulting</option>
-          <option>Something else</option>
+          <option>A client referral enquiry</option>
+          <option>An independent recruiter collaboration</option>
+          <option>A fractional HR / talent project enquiry</option>
+          <option>A general enquiry</option>
         </select>
       </div>
 
@@ -109,13 +113,23 @@ export default function ContactForm() {
       </div>
 
       <div className="fld">
+        <label htmlFor="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" placeholder="Your contact number (optional)" />
+      </div>
+
+      <div className="fld">
         <label htmlFor="company">Company</label>
         <input id="company" type="text" name="company" placeholder="Your organisation (optional)" />
       </div>
 
       <div className="fld">
         <label htmlFor="message">How can we help?</label>
-        <textarea id="message" name="message" placeholder="A little about your team or your goals…" rows={3} />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell us a little about your hiring need, referral, collaboration or project…"
+          rows={3}
+        />
       </div>
 
       {error && (

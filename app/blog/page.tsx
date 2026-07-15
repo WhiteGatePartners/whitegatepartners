@@ -55,13 +55,14 @@ export default async function BlogPage() {
       <>
         <section className="pg-hero">
           <div className="wrap">
-            <span className="kick">Thought Leadership</span>
+            <span className="kick">Perspectives</span>
             <h1>
               Thinking on talent, <em>strategy and people.</em>
             </h1>
             <p className="lede">
-              Perspectives from the White Gate Partners team on hiring, workforce
-              strategy and building organisations that last.
+              Perspectives from White Gate Partners on hiring, talent
+              markets, workforce trends and the decisions that shape
+              stronger teams.
             </p>
           </div>
         </section>
@@ -85,13 +86,13 @@ export default async function BlogPage() {
       {/* PAGE HERO */}
       <section className="pg-hero">
         <div className="wrap">
-          <span className="kick">Thought Leadership</span>
+          <span className="kick">Perspectives</span>
           <h1>
             Thinking on talent, <em>strategy and people.</em>
           </h1>
           <p className="lede">
-            Perspectives from the White Gate Partners team on hiring, workforce
-            strategy and building organisations that last.
+            Perspectives from White Gate Partners on hiring, talent markets,
+            workforce trends and the decisions that shape stronger teams.
           </p>
         </div>
       </section>
@@ -181,11 +182,13 @@ export default async function BlogPage() {
           <div className="cta-inner">
             <div>
               <h2>
-                Want to <em>talk through a challenge?</em>
+                Let&apos;s turn perspective into{" "}
+                <em>better hiring decisions.</em>
               </h2>
               <p>
-                Our team is always happy to have a candid conversation about
-                your hiring or people strategy — with no obligation.
+                If something here connects with your current hiring plans,
+                market questions or talent priorities, we&apos;d welcome the
+                conversation.
               </p>
             </div>
             <a
