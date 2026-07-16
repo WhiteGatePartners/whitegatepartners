@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <Image
-              src="/logo_grey_new.png"
+              src="/logo_grey_long2.png"
               alt="White Gate Partners"
               width={300}
               height={156}

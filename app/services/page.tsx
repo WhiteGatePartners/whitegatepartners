@@ -47,7 +47,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* SOLUTIONS OVERVIEW */}
-      <section className="block" style={{ paddingTop: 0 }}>
+      <section className="block" style={{ paddingTop: 64 }}>
         <div className="wrap">
           <div className="solution-cards">
             <div className="solution-card">
@@ -102,7 +102,6 @@ export default function SolutionsPage() {
       <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 04</span>
             <div>
               <h2>
                 A closer look at <em>each solution.</em>
@@ -134,7 +133,7 @@ export default function SolutionsPage() {
               </div>
               <div className="svc-expanded-photo">
                 <Image
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80&auto=format&fit=crop"
+                  src="/solution1.jpeg"
                   alt="Executive Search"
                   fill
                   sizes="40vw"
@@ -148,7 +147,7 @@ export default function SolutionsPage() {
             <div className="svc-expanded-grid">
               <div className="svc-expanded-photo">
                 <Image
-                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=900&q=80&auto=format&fit=crop"
+                  src="/solution2.jpeg"
                   alt="Specialist Recruitment"
                   fill
                   sizes="40vw"
@@ -209,7 +208,7 @@ export default function SolutionsPage() {
               </div>
               <div className="svc-expanded-photo">
                 <Image
-                  src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=900&q=80&auto=format&fit=crop"
+                  src="/solution3.jpeg"
                   alt="Talent Solutions"
                   fill
                   sizes="40vw"

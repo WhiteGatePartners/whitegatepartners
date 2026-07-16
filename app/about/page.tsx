@@ -68,7 +68,7 @@ export default async function AboutPage() {
           <div className="about-grid">
             <div className="about-ph">
               <Image
-                src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1100&q=80&auto=format&fit=crop"
+                src="/aboutus.jpeg"
                 alt="White Gate Partners office"
                 fill
                 sizes="50vw"
@@ -126,7 +126,6 @@ export default async function AboutPage() {
       <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 01</span>
             <div>
               <h2>
                 Experienced talent professionals with{" "}
@@ -181,7 +180,6 @@ export default async function AboutPage() {
       <section className="block approach-section">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 02</span>
             <div>
               <h2>
                 What we believe about hiring — <em>and people.</em>

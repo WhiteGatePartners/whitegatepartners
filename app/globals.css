@@ -444,7 +444,7 @@ section.block {
 
 /* ─── Who we support ─── */
 .support-section {
-  background: var(--paper);
+  background: var(--grey-light);
 }
 .support-grid {
   display: grid;
@@ -646,7 +646,6 @@ section.block {
   line-height: 1.6;
   color: rgba(230, 230, 227, 0.5);
   font-weight: 300;
-  max-width: 90ch;
 }
 .process-step {
   padding-right: 6px;
@@ -909,6 +908,94 @@ section.block {
   color: var(--muted);
 }
 
+/* ─── Testimonial carousel ─── */
+.tc {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tc-slide {
+  animation: tc-fade 0.5s ease;
+}
+@keyframes tc-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tc-slide .qmark {
+  font-size: 70px;
+  line-height: 0;
+  color: var(--accent);
+  height: 40px;
+  display: block;
+  margin-bottom: 6px;
+}
+.tc-slide blockquote {
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.tc-slide blockquote p + p {
+  margin-top: 18px;
+}
+.tc-source {
+  margin-top: 32px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+.tc-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 54px;
+}
+.tc-arrow {
+  background: none;
+  border: 1px solid var(--line);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 16px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tc-arrow:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.tc-dots {
+  display: flex;
+  gap: 10px;
+}
+.tc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  border: none;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.tc-dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
 /* ─── CTA strip ─── */
 .cta-strip {
   padding: 110px 0;
@@ -1053,12 +1140,12 @@ section.block {
   font-style: italic;
 }
 .svc-expanded .svc-num {
-  font-size: 80px;
+  font-size: 56px;
   font-weight: 300;
-  color: var(--line);
+  color: var(--accent);
   line-height: 1;
   letter-spacing: -0.03em;
-  margin-bottom: -16px;
+  margin-bottom: 12px;
 }
 .svc-expanded p {
   font-size: 18px;
@@ -1074,7 +1161,6 @@ section.block {
 }
 .svc-expanded li {
   padding: 12px 0;
-  border-bottom: 1px solid var(--line);
   font-size: 16px;
   color: var(--ink-soft);
   display: flex;

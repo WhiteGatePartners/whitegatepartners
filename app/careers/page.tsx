@@ -56,12 +56,9 @@ export default function PartnershipsPage() {
         <div className="wrap">
           <span className="kick">Partner with us</span>
           <h1>
-            Shape the future of <em>work — from the inside.</em>
-          </h1>
-          <p className="lede">
             Collaborate through trusted referrals, independent recruitment
-            delivery and fractional talent expertise.
-          </p>
+            delivery and <em>fractional talent expertise.</em>
+          </h1>
           <p className="lede">
             White Gate Partners works with trusted referrers, CEI-certified
             independent recruiters and senior HR or talent practitioners who
@@ -76,7 +73,6 @@ export default function PartnershipsPage() {
       <section className="block">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 01</span>
             <div>
               <h2>Three partnership routes.</h2>
               <p className="sub">
@@ -111,7 +107,6 @@ export default function PartnershipsPage() {
       <section className="block process-section">
         <div className="wrap">
           <div className="head">
-            <span className="num">§ 02</span>
             <div>
               <span className="eyebrow on-dark">How it works</span>
               <h2>How partnership arrangements work.</h2>

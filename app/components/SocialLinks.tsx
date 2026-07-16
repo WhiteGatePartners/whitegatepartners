@@ -1,6 +1,6 @@
 export const WHATSAPP_URL = "https://wa.me/6591682181";
 export const WECHAT_URL = "weixin://";
-export const LINKEDIN_URL = "#"; // update when URL is provided
+export const LINKEDIN_URL = "https://www.linkedin.com/company/white-gate-partners";
 
 const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

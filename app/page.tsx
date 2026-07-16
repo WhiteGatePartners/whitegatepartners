@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import TestimonialCarousel from "./components/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
@@ -32,8 +33,8 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="wrap">
           <div className="hero-top">
-            <span className="kick">White Gate Partners — Singapore</span>
-            <span className="idx">Executive Search / Specialist Recruitment / Talent Solutions</span>
+            {/* <span className="kick">White Gate Partners — Singapore</span> */}
+            <span className="idx">Executive Search | Specialist Recruitment | Talent Solutions</span>
           </div>
           <h1>
             Talent,
@@ -433,57 +434,7 @@ export default function Home() {
           <span className="kick" style={{ display: "block", textAlign: "center", marginBottom: 40 }}>
             What clients say
           </span>
-          <div className="pull">
-            <span className="qmark">&ldquo;</span>
-            <blockquote>
-              They understood our compliance function before we did.
-            </blockquote>
-            <div className="who">
-              <b>Rachel Tan</b>
-              <span>Chief Operating Officer · Regional FinTech scale-up</span>
-            </div>
-          </div>
-          <div className="mini">
-            <div className="m">
-              <blockquote>
-                &ldquo;The most honest recruiter I&apos;ve worked with — they
-                told me which roles weren&apos;t right, so I trusted the one
-                that was.&rdquo;
-              </blockquote>
-              <div className="who">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop"
-                  alt="Daniel Lim"
-                  width={46}
-                  height={46}
-                  style={{ borderRadius: "50%", objectFit: "cover" }}
-                />
-                <div>
-                  <b>Daniel Lim</b>
-                  <span>Finance Director · Placed candidate</span>
-                </div>
-              </div>
-            </div>
-            <div className="m">
-              <blockquote>
-                &ldquo;We came for one hire and stayed for the advisory. White
-                Gate reshaped how our whole team is structured.&rdquo;
-              </blockquote>
-              <div className="who">
-                <Image
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80&auto=format&fit=crop"
-                  alt="Priya Menon"
-                  width={46}
-                  height={46}
-                  style={{ borderRadius: "50%", objectFit: "cover" }}
-                />
-                <div>
-                  <b>Priya Menon</b>
-                  <span>Founder · Logistics startup</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 
