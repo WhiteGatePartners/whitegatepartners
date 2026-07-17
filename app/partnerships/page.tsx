@@ -76,7 +76,7 @@ export default function PartnershipsPage() {
           <div className="about-grid">
             <div className="about-ph">
               <Image
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1100&q=80&auto=format&fit=crop"
+                src="/room.jpeg"
                 alt="White Gate Partners office"
                 fill
                 sizes="50vw"

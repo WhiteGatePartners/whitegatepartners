@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
 export const WHATSAPP_URL = "https://wa.me/6591682181";
-export const WECHAT_URL = "weixin://";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/white-gate-partners";
 
 const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
@@ -20,15 +24,78 @@ const LinkedInIcon = ({ size = 18 }: { size?: number }) => (
   </svg>
 );
 
+function WeChatModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      className="wechat-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="WeChat QR code"
+      onClick={onClose}
+    >
+      <div className="wechat-modal" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="wechat-close" aria-label="Close" onClick={onClose}>
+          ×
+        </button>
+        <span className="wechat-modal-title">Scan to connect on WeChat</span>
+        <Image
+          src="/wechatqr.jpeg"
+          alt="White Gate Partners WeChat QR code"
+          width={240}
+          height={240}
+          className="wechat-qr"
+        />
+      </div>
+    </div>
+  );
+}
+
+function WeChatButton({ variant }: { variant: "icon" | "chip" }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      {variant === "icon" ? (
+        <button
+          type="button"
+          className="foot-social-btn"
+          aria-label="WeChat +65 9168 2181"
+          aria-haspopup="dialog"
+          onClick={() => setOpen(true)}
+        >
+          <WeChatIcon size={20} />
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="social-chip"
+          title="+65 9168 2181"
+          aria-haspopup="dialog"
+          onClick={() => setOpen(true)}
+        >
+          <WeChatIcon /> WeChat
+        </button>
+      )}
+      {open && <WeChatModal onClose={() => setOpen(false)} />}
+    </>
+  );
+}
+
 export function SocialIcons() {
   return (
     <div className="foot-social">
       <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +65 9168 2181">
         <WhatsAppIcon size={20} />
       </a>
-      <a href={WECHAT_URL} aria-label="WeChat +65 9168 2181">
-        <WeChatIcon size={20} />
-      </a>
+      <WeChatButton variant="icon" />
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <LinkedInIcon size={20} />
       </a>
@@ -42,9 +109,7 @@ export function SocialChips() {
       <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="social-chip" title="+65 9168 2181">
         <WhatsAppIcon /> WhatsApp
       </a>
-      <a href={WECHAT_URL} className="social-chip" title="+65 9168 2181">
-        <WeChatIcon /> WeChat
-      </a>
+      <WeChatButton variant="chip" />
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="social-chip" title="LinkedIn">
         <LinkedInIcon /> LinkedIn
       </a>
