@@ -48,11 +48,6 @@ export default async function AboutPage() {
             Built on judgement, <em>not transaction.</em>
           </h1>
           <p className="lede">
-            A Singapore-based partnership founded on the conviction that great
-            hiring demands the same rigour as great strategy — and that the two
-            should never be separated.
-          </p>
-          <p className="lede">
             White Gate Partners is a Singapore-based executive search,
             specialist recruitment and talent solutions firm established on a
             simple belief: great hiring requires business context, market
@@ -74,7 +69,6 @@ export default async function AboutPage() {
                 sizes="50vw"
                 style={{ objectFit: "cover" }}
               />
-              <span className="tab">Our story</span>
             </div>
             <div>
               <h2>Beyond the Brief, Into the Business.</h2>

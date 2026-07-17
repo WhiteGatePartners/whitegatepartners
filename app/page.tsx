@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     title: "White Gate Partners | Regional Executive Search & Specialist Recruitment",
     description:
       "Singapore-based executive search, specialist recruitment and talent solutions for regional and cross-border hiring across Southeast Asia and selected international markets.",
-    url: "https://whitegatepartners.sg",
+    url: "https://whitegatepartners.co",
   },
-  alternates: { canonical: "https://whitegatepartners.sg" },
+  alternates: { canonical: "https://whitegatepartners.co" },
 };
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
           </h1>
           <div className="hero-lower">
             <p className="lede">
-              A Singapore-based executive search, specialist recruitment and talent solutions firm
+              White Gate Partners is a Singapore-based executive search, specialist recruitment and talent solutions firm
               supporting regional and cross-border hiring across Southeast Asia and selected international markets.
             </p>
             <div className="hero-actions">
@@ -150,7 +150,7 @@ export default function Home() {
           <div style={{ marginTop: 48 }}>
             <Link
               className="biglink"
-              href="/services"
+              href="/solutions"
               style={{ maxWidth: 400 }}
             >
               Explore our solutions <span className="ar">→</span>
@@ -431,9 +431,10 @@ export default function Home() {
       {/* WHAT CLIENTS SAY */}
       <section className="block quotes-section">
         <div className="wrap">
-          <span className="kick" style={{ display: "block", textAlign: "center", marginBottom: 40 }}>
-            What clients say
-          </span>
+          <div className="tc-head">
+            <span className="eyebrow">What clients say</span>
+            <h2>Built on trust, proven through delivery.</h2>
+          </div>
           <TestimonialCarousel />
         </div>
       </section>

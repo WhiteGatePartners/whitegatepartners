@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     quote: [
-      "White Gate Partners has been a trusted recruitment partner for our Asia-Pacific pharmaceutical business. Their industry understanding, rigorous screening standards and responsiveness have helped us achieve consistent, high-quality hiring outcomes. We value their professionalism and would recommend their services to other organisations.",
+      "White Gate Partners has been a trusted recruitment partner for our Asia-Pacific business. Their industry understanding, rigorous screening standards and responsiveness have helped us achieve consistent, high-quality hiring outcomes. We value their professionalism and would recommend their services to other organisations.",
     ],
     source: "General Manager, China-headquartered Company",
   },

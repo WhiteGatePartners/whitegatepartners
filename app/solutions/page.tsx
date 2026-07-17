@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     title: "Solutions | White Gate Partners",
     description:
       "Executive Search · Specialist Recruitment · Talent Solutions across Singapore, Southeast Asia and selected international markets.",
-    url: "https://whitegatepartners.sg/services",
+    url: "https://whitegatepartners.sg/solutions",
   },
-  alternates: { canonical: "https://whitegatepartners.sg/services" },
+  alternates: { canonical: "https://whitegatepartners.sg/solutions" },
 };
 
 export default function SolutionsPage() {

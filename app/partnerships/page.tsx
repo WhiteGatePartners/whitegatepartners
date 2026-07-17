@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -16,9 +17,9 @@ export const metadata: Metadata = {
     title: "Partnerships | White Gate Partners",
     description:
       "Collaborate through trusted referrals, independent recruitment delivery and fractional talent expertise.",
-    url: "https://whitegatepartners.sg/careers",
+    url: "https://whitegatepartners.sg/partnerships",
   },
-  alternates: { canonical: "https://whitegatepartners.sg/careers" },
+  alternates: { canonical: "https://whitegatepartners.sg/partnerships" },
 };
 
 const routes = [
@@ -56,8 +57,8 @@ export default function PartnershipsPage() {
         <div className="wrap">
           <span className="kick">Partner with us</span>
           <h1>
-            Collaborate through trusted referrals, independent recruitment
-            delivery and <em>fractional talent expertise.</em>
+            Collaborate through trusted referrals and{" "}
+            <em>talent partnerships.</em>
           </h1>
           <p className="lede">
             White Gate Partners works with trusted referrers, CEI-certified
@@ -69,13 +70,22 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* PARTNERSHIP ROUTES */}
-      <section className="block">
+      {/* PARTNERSHIP ROUTES INTRO */}
+      <section className="block about-home">
         <div className="wrap">
-          <div className="head">
+          <div className="about-grid">
+            <div className="about-ph">
+              <Image
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1100&q=80&auto=format&fit=crop"
+                alt="White Gate Partners office"
+                fill
+                sizes="50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
             <div>
               <h2>Three partnership routes.</h2>
-              <p className="sub">
+              <p>
                 White Gate Partners collaborates with trusted referrers,
                 CEI-certified independent recruiters and senior HR or talent
                 practitioners who can add value through client introductions,
@@ -86,6 +96,12 @@ export default function PartnershipsPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PARTNERSHIP ROUTES CARDS */}
+      <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
+        <div className="wrap">
           <div className="route-cards">
             {routes.map((r) => (
               <div className="route-card" key={r.n}>

@@ -108,7 +108,7 @@ export default async function OpeningsPage() {
               <Link className="biglink" href="/contact" style={{ maxWidth: 340 }}>
                 Introduce yourself <span className="ar">→</span>
               </Link>
-              <Link className="biglink" href="/careers" style={{ maxWidth: 340 }}>
+              <Link className="biglink" href="/partnerships" style={{ maxWidth: 340 }}>
                 About working here <span className="ar">→</span>
               </Link>
             </div>

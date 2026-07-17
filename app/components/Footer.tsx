@@ -25,15 +25,15 @@ export default function Footer() {
             <h4>Company</h4>
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/careers">Partnerships</Link>
-            <Link href="/blog">Talent Perspectives</Link>
+            <Link href="/partnerships">Partnerships</Link>
+            <Link href="/talent-perspectives">Talent Perspectives</Link>
           </div>
 
           <div className="foot-col">
             <h4>Solutions</h4>
-            <Link href="/services">Executive Search</Link>
-            <Link href="/services">Specialist Recruitment</Link>
-            <Link href="/services">Talent Solutions</Link>
+            <Link href="/solutions">Executive Search</Link>
+            <Link href="/solutions">Specialist Recruitment</Link>
+            <Link href="/solutions">Talent Solutions</Link>
           </div>
 
           <div className="foot-col">

@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     title: "Talent Perspectives | White Gate Partners",
     description:
       "Hiring, recruitment and career perspectives from a Singapore-based executive search and specialist recruitment firm.",
-    url: "https://whitegatepartners.sg/blog",
+    url: "https://whitegatepartners.sg/talent-perspectives",
   },
-  alternates: { canonical: "https://whitegatepartners.sg/blog" },
+  alternates: { canonical: "https://whitegatepartners.sg/talent-perspectives" },
 };
 
 type Post = {
@@ -103,7 +103,7 @@ export default async function BlogPage() {
           <span className="kick" style={{ display: "block", marginBottom: 28 }}>
             Featured
           </span>
-          <a className="blog-featured" href={`/blog/${featured.slug.current}`}>
+          <a className="blog-featured" href={`/talent-perspectives/${featured.slug.current}`}>
             <div className="bc-photo">
               {featuredImgSrc && (
                 <Image
@@ -147,7 +147,7 @@ export default async function BlogPage() {
                   <a
                     className="blog-card"
                     key={post._id}
-                    href={`/blog/${post.slug.current}`}
+                    href={`/talent-perspectives/${post.slug.current}`}
                   >
                     <div className="bc-photo">
                       {imgSrc && (

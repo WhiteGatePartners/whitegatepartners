@@ -33,9 +33,9 @@ export default function ContactPage() {
             Start the <em>right conversation.</em>
           </h1>
           <p className="lede">
-            Whether you are hiring, exploring a partnership or simply want to
-            understand how White Gate Partners may be able to support your
-            talent needs, we&apos;d welcome the conversation.
+            We welcome hiring, business and partnership enquiries, and are
+            always open to an exploratory conversation — even if you are
+            still shaping what you need.
           </p>
         </div>
       </section>

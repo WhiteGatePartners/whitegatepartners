@@ -17,13 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE}/services`,
+      url: `${BASE}/solutions`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE}/blog`,
+      url: `${BASE}/talent-perspectives`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE}/careers`,
+      url: `${BASE}/partnerships`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,

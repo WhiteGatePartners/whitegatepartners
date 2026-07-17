@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://whitegatepartners.sg/blog/${slug}`,
+      url: `https://whitegatepartners.sg/talent-perspectives/${slug}`,
     },
-    alternates: { canonical: `https://whitegatepartners.sg/blog/${slug}` },
+    alternates: { canonical: `https://whitegatepartners.sg/talent-perspectives/${slug}` },
   };
 }
 
@@ -124,7 +124,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div style={{ marginTop: 64, paddingTop: 32, borderTop: "1px solid var(--line)" }}>
             <Link
-              href="/blog"
+              href="/talent-perspectives"
               style={{ color: "var(--accent)", textDecoration: "none", fontWeight: 500 }}
             >
               ← Back to all articles
