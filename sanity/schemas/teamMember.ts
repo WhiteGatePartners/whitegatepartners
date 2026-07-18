@@ -34,6 +34,12 @@ export const teamMember = defineType({
       ],
     }),
     defineField({
+      name: 'linkedin',
+      title: 'LinkedIn URL',
+      type: 'url',
+      validation: (r) => r.uri({ scheme: ['http', 'https'] }),
+    }),
+    defineField({
       name: 'order',
       title: 'Display Order',
       type: 'number',

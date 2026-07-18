@@ -32,7 +32,8 @@ export const teamMembersQuery = `
     name,
     role,
     bio,
-    photo
+    photo,
+    linkedin
   }
 `
 

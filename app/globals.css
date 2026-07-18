@@ -1347,10 +1347,23 @@ section.block {
   padding: 20px 0 24px;
 }
 .tc-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-size: 22px;
   font-weight: 400;
   color: var(--ink);
   margin-bottom: 2px;
+}
+.tc-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.tc-linkedin:hover {
+  color: var(--accent);
 }
 .tc-role {
   font-size: 12px;
@@ -1750,6 +1763,10 @@ section.block {
   .wrap {
     padding: 0 24px;
   }
+  .brand img {
+    width: 220px;
+    height: auto;
+  }
   .navlinks {
     display: none;
   }
@@ -1870,6 +1887,9 @@ section.block {
 @media (max-width: 640px) {
   .wrap {
     padding: 0 20px;
+  }
+  .brand img {
+    width: 170px;
   }
   section.block {
     padding: 80px 0;
