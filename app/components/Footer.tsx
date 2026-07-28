@@ -38,8 +38,8 @@ export default function Footer() {
 
           <div className="foot-col">
             <h4>Contact</h4>
-            <a href="mailto:asher@whitegatepartners.co">
-              asher@whitegatepartners.co
+            <a href="mailto:hello@whitegatepartners.sg">
+              hello@whitegatepartners.sg
             </a>
             <a href="tel:+6591682181">+65 9168 2181</a>
             <SocialIcons />
@@ -47,7 +47,10 @@ export default function Footer() {
         </div>
 
         <div className="foot-bot">
-          <span>© 2026 White Gate Partners Pte. Ltd. · UEN 202600064K</span>
+          <span>
+            © 2026 White Gate Partners Pte. Ltd. · UEN 202600064K ·{" "}
+            <Link href="/privacy-policy">Privacy Policy</Link>
+          </span>
           <span>Employment Agency Licence: 26C3291</span>
         </div>
       </div>

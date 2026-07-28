@@ -237,6 +237,61 @@
       {
         "name": "body",
         "type": "blockContent"
+      },
+      {
+        "name": "author",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 60
+              }
+            ]
+          }
+        ],
+        "description": "Overrides the page <title> tag. Falls back to Title if left blank.",
+        "name": "seoTitle",
+        "type": "string",
+        "title": "SEO Title"
+      },
+      {
+        "rows": 2,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ]
+          }
+        ],
+        "description": "Overrides the search-result description. Falls back to Excerpt if left blank.",
+        "name": "metaDescription",
+        "type": "text"
+      },
+      {
+        "description": "The main search term this post targets.",
+        "name": "primaryKeyword",
+        "type": "string"
+      },
+      {
+        "options": {
+          "layout": "tags"
+        },
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "supportingKeywords",
+        "type": "array"
       }
     ],
     "name": "post",

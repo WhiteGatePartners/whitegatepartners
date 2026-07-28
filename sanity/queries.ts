@@ -22,7 +22,12 @@ export const postBySlugQuery = `
     publishedAt,
     readTime,
     mainImage,
-    body
+    body,
+    seoTitle,
+    metaDescription,
+    primaryKeyword,
+    supportingKeywords,
+    author
   }
 `
 

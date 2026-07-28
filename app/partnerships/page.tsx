@@ -62,10 +62,11 @@ export default function PartnershipsPage() {
           </h1>
           <p className="lede">
             White Gate Partners works with trusted referrers, CEI-certified
-            independent recruiters and senior HR or talent practitioners who
-            can support client introductions, selected search assignments and
-            future talent solutions projects across Singapore, Southeast Asia
-            and selected international markets.
+            independent recruiters and senior HR or talent practitioners
+            across Singapore, Southeast Asia and selected international
+            markets. Together, we create opportunities through client
+            introductions, selected search assignments and future talent
+            solutions projects.
           </p>
         </div>
       </section>
@@ -116,6 +117,15 @@ export default function PartnershipsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* NETWORK QUOTE */}
+      <section className="block partner-quote-section">
+        <div className="wrap">
+          <p className="partner-quote">
+            Your network is valuable. <em>Let it work for you.</em>
+          </p>
         </div>
       </section>
 

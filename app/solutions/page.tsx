@@ -101,7 +101,7 @@ export default function SolutionsPage() {
       {/* EXPANDED DETAIL */}
       <section className="block" style={{ background: "var(--ivory)", borderTop: "1px solid var(--line)" }}>
         <div className="wrap">
-          <div className="head">
+          <div className="head" style={{ marginBottom: 28 }}>
             <div>
               <h2>
                 A closer look at <em>each solution.</em>
@@ -325,7 +325,7 @@ export default function SolutionsPage() {
                 <li>Supply Chain &amp; Logistics</li>
                 <li>Financial Services &amp; Insurance</li>
                 <li>Professional Services</li>
-                <li>Chemicals &amp; Specialty Materials</li>
+                <li>Chemicals &amp; Commodities</li>
                 <li>Energy &amp; Renewables</li>
               </ul>
             </div>

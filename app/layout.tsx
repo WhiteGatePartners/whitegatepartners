@@ -84,7 +84,7 @@ const jsonLd = {
   url: "https://whitegatepartners.sg",
   logo: {
     "@type": "ImageObject",
-    url: "https://whitegatepartners.co/logo.png",
+    url: "https://whitegatepartners.sg/logo.png",
   },
   image: "https://whitegatepartners.sg/opengraph-image",
   description:
@@ -98,12 +98,12 @@ const jsonLd = {
     addressCountry: "SG",
   },
   telephone: "+65 9168 2181",
-  email: "asher@whitegatepartners.co",
+  email: "hello@whitegatepartners.sg",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+65 9168 2181",
     contactType: "customer service",
-    email: "asher@whitegatepartners.co",
+    email: "hello@whitegatepartners.sg",
     areaServed: ["SG", "MY", "TH", "PH", "AU", "GB"],
     availableLanguage: ["English", "Mandarin Chinese"],
   },

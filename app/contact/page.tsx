@@ -49,9 +49,8 @@ export default function ContactPage() {
                 A conversation costs <em>nothing.</em>
               </h2>
               <p className="lede">
-                We aim to respond to all enquiries within one business day
-                and are happy to have an exploratory conversation — even if
-                you are still shaping what you need.
+                Tell us a little about what you are looking for, and we will
+                take it from there.
               </p>
               <div className="contact-info">
                 <div className="r">
@@ -61,8 +60,8 @@ export default function ContactPage() {
                 <div className="r">
                   <div className="k">Email</div>
                   <b>
-                    <a href="mailto:asher@whitegatepartners.co">
-                      asher@whitegatepartners.co
+                    <a href="mailto:hello@whitegatepartners.sg">
+                      hello@whitegatepartners.sg
                     </a>
                   </b>
                 </div>

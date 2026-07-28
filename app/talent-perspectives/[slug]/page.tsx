@@ -17,6 +17,11 @@ type Post = {
   readTime?: string;
   mainImage?: { asset: { _ref: string }; alt?: string };
   body?: unknown[];
+  author?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  primaryKeyword?: string;
+  supportingKeywords?: string[];
 };
 
 type Props = {
@@ -34,12 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post: Post | null = await client.fetch(postBySlugQuery, { slug });
   if (!post) return {};
+  const title = post.seoTitle || post.title;
+  const description = post.metaDescription || post.excerpt;
+  const keywords = [post.primaryKeyword, ...(post.supportingKeywords ?? [])].filter(
+    (k): k is string => Boolean(k)
+  );
   return {
-    title: `${post.title} | White Gate Partners`,
-    description: post.excerpt,
+    title: `${title} | White Gate Partners`,
+    description,
+    keywords: keywords.length ? keywords : undefined,
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description,
       url: `https://whitegatepartners.sg/talent-perspectives/${slug}`,
     },
     alternates: { canonical: `https://whitegatepartners.sg/talent-perspectives/${slug}` },
@@ -80,6 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
               fontSize: 15,
             }}
           >
+            {post.author && <span>By {post.author}</span>}
             <span>{formatDate(post.publishedAt)}</span>
             {post.readTime && <span>{post.readTime}</span>}
           </div>

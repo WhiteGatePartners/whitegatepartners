@@ -71,6 +71,39 @@ export const post = defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'author',
+      title: 'Author',
+      type: 'string',
+    }),
+    defineField({
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+      description: 'Overrides the page <title> tag. Falls back to Title if left blank.',
+      validation: (r) => r.max(60),
+    }),
+    defineField({
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'text',
+      rows: 2,
+      description: 'Overrides the search-result description. Falls back to Excerpt if left blank.',
+      validation: (r) => r.max(160),
+    }),
+    defineField({
+      name: 'primaryKeyword',
+      title: 'Primary Keyword',
+      type: 'string',
+      description: 'The main search term this post targets.',
+    }),
+    defineField({
+      name: 'supportingKeywords',
+      title: 'Supporting Keywords',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { layout: 'tags' },
+    }),
   ],
   preview: {
     select: {

@@ -407,7 +407,7 @@ export default function Home() {
                 <li>Supply Chain &amp; Logistics</li>
                 <li>Financial Services &amp; Insurance</li>
                 <li>Professional Services</li>
-                <li>Chemicals &amp; Specialty Materials</li>
+                <li>Chemicals &amp; Commodities</li>
                 <li>Energy &amp; Renewables</li>
               </ul>
             </div>
