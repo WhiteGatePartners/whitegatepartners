@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { PortableText } from "@portabletext/react";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import { client } from "@/sanity/client";
-import { postBySlugQuery, postsQuery } from "@/sanity/queries";
+import { postBySlugQuery } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
 
 type Post = {
@@ -56,6 +56,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: `https://whitegatepartners.sg/talent-perspectives/${slug}` },
   };
 }
+
+const ptComponents: PortableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      const src = urlForImage(value).width(900).url();
+      return (
+        <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9" }}>
+          <Image
+            src={src}
+            alt={value.alt ?? ""}
+            fill
+            sizes="720px"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      );
+    },
+  },
+  marks: {
+    link: ({ value, children }) => (
+      <a
+        href={value?.href}
+        target={value?.blank ? "_blank" : undefined}
+        rel={value?.blank ? "noopener noreferrer" : undefined}
+      >
+        {children}
+      </a>
+    ),
+  },
+};
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-SG", {
@@ -126,7 +156,10 @@ export default async function BlogPostPage({ params }: Props) {
         >
           {post.body ? (
             <div className="prose">
-              <PortableText value={post.body as Parameters<typeof PortableText>[0]["value"]} />
+              <PortableText
+                value={post.body as Parameters<typeof PortableText>[0]["value"]}
+                components={ptComponents}
+              />
             </div>
           ) : (
             <p style={{ color: "var(--ink-soft)" }}>
