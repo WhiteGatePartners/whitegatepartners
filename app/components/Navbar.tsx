@@ -41,7 +41,8 @@ export default function Navbar() {
               src="/logo_grey_long2.png"
               alt="White Gate Partners"
               width={380}
-              height={87}
+              height={46}
+              quality={100}
               priority
               style={{ display: "block" }}
             />

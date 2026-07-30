@@ -12,7 +12,8 @@ export default function Footer() {
               src="/logo_grey_long2.png"
               alt="White Gate Partners"
               width={300}
-              height={156}
+              height={36}
+              quality={100}
               style={{ display: "block" }}
             />
             <p>
