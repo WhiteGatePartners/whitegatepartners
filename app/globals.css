@@ -481,9 +481,11 @@ section.block {
   padding: 20px 0 60px;
 }
 .partner-quote {
-  font-size: clamp(24px, 2.6vw, 32px);
-  font-weight: 400;
-  line-height: 1.3;
+  font-size: clamp(32px, 5.6vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
   color: var(--ink);
 }
 .partner-quote em {
