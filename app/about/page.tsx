@@ -80,11 +80,13 @@ export default async function AboutPage() {
             <div>
               <h2>Beyond the Brief, Into the Business.</h2>
               <p>
-                White Gate Partners is a Singapore-based executive search,
-                specialist recruitment and talent solutions firm established
-                to offer companies a more considered recruitment partner —
-                one that asks better questions, moves with purpose and
-                maintains hands-on involvement from briefing to outcome.
+                The right search begins with understanding why a hire matters
+                — not simply what appears in the job description. We take time
+                to understand the business priorities behind each mandate,
+                what success should look like and where the real challenges
+                may sit. This allows us to ask better questions, challenge
+                assumptions where needed and shape each search around market
+                realities.
               </p>
               <p>
                 We work with clients beyond single transactions, building
@@ -119,6 +121,26 @@ export default async function AboutPage() {
                 </div>
               </dl>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RECRUITMENT, AS IT SHOULD BE */}
+      <section className="block creed-section">
+        <div className="wrap">
+          <div className="creed-inner">
+            <h2>
+              Recruitment, <em>as it should be.</em>
+            </h2>
+            <p className="mid-sub">
+              Grounded. Transparent. Unpretentious.
+            </p>
+            <p className="creed-body">
+              Good recruitment does not need theatre. It requires sound
+              judgement, honest communication and the discipline to do the work
+              properly. We make considered introductions, give candid advice
+              and remain accountable for the outcome.
+            </p>
           </div>
         </div>
       </section>

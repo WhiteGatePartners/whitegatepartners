@@ -235,16 +235,17 @@ export default function Home() {
             <div>
               <span className="eyebrow">Why White Gate Partners</span>
               <h2 className="why-h2">
-                Experience, market insight and accountable{" "}
-                <em>follow-through.</em>
+                Recruitment,
+                <br />
+                <em>as it should be.</em>
               </h2>
+              <p className="mid-sub">
+                Grounded. Transparent. Unpretentious.
+              </p>
               <p className="why-lede">
-                We bring senior-level talent experience, practical market
-                understanding and regional hiring exposure to each client
-                engagement. Whether supporting a leadership search, specialist
-                role or broader talent project, we take time to understand the
-                business context, engage the right talent and communicate
-                clearly throughout the process.
+                We bring senior-level experience, market insight and hands-on
+                delivery to every assignment. Our approach is straightforward,
+                accountable and focused on achieving the right outcome.
               </p>
               <div className="why-points">
                 <div className="why-point">
