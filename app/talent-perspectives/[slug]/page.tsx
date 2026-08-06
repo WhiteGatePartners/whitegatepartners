@@ -107,9 +107,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <section className="pg-hero">
+      <section className="pg-hero blog-post-hero">
         <div className="wrap">
-          <span className="kick">{post.category}</span>
+          <span className="kick accent">{post.category}</span>
           <h1>{post.title}</h1>
           <p className="lede">{post.excerpt}</p>
           <div

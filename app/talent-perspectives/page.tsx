@@ -55,7 +55,7 @@ export default async function BlogPage() {
       <>
         <section className="pg-hero">
           <div className="wrap">
-            <span className="kick">Perspectives</span>
+            <span className="kick accent">Perspectives</span>
             <h1>
               Thinking on talent, <em>strategy and people.</em>
             </h1>
@@ -86,7 +86,7 @@ export default async function BlogPage() {
       {/* PAGE HERO */}
       <section className="pg-hero">
         <div className="wrap">
-          <span className="kick">Perspectives</span>
+          <span className="kick accent">Perspectives</span>
           <h1>
             Thinking on talent, <em>strategy and people.</em>
           </h1>
@@ -100,7 +100,7 @@ export default async function BlogPage() {
       {/* FEATURED POST */}
       <section className="block">
         <div className="wrap">
-          <span className="kick" style={{ display: "block", marginBottom: 28 }}>
+          <span className="kick accent" style={{ display: "block", marginBottom: 28 }}>
             Featured
           </span>
           <a className="blog-featured" href={`/talent-perspectives/${featured.slug.current}`}>

@@ -58,6 +58,10 @@ button {
   color: var(--ink-soft);
   font-weight: 500;
 }
+/* Blog eyebrows use the accent green, matching .eyebrow elsewhere on the site */
+.kick.accent {
+  color: var(--accent);
+}
 .idx {
   font-size: 13px;
   letter-spacing: 0.05em;
@@ -896,7 +900,7 @@ section.block {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--ink-soft);
+  color: var(--ink);
 }
 .prose p {
   margin: 0 0 24px;
@@ -1198,6 +1202,11 @@ section.block {
   margin-top: 30px;
   font-weight: 300;
   line-height: 1.45;
+}
+/* Article titles run long, so they sit a step below the marketing page heroes */
+.blog-post-hero h1 {
+  font-size: clamp(38px, 5.4vw, 84px);
+  max-width: 22ch;
 }
 
 /* ─── Solutions overview cards ─── */
