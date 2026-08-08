@@ -163,7 +163,7 @@ export default async function AboutPage() {
                 mapping, project recruitment or broader talent needs.
               </p>
               <p className="sub">
-                The people who win the mandate are the same people shaping the
+                The people who take on the mandate are the same people shaping the
                 search, sourcing the market and staying accountable through to
                 outcome — not handing the work down once the search begins.
               </p>
