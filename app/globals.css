@@ -556,7 +556,7 @@ section.block {
 
 /* ─── Why White Gate Partners ─── */
 .why-section {
-  background: var(--paper);
+  background: var(--ivory);
 }
 .why-grid {
   display: grid;
@@ -605,8 +605,8 @@ section.block {
 
 /* ─── "Recruitment, as it should be." statement ─── */
 .creed-section {
-  background: var(--ivory);
-  border-top: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
   text-align: center;
 }
 .creed-inner {
@@ -619,16 +619,19 @@ section.block {
   font-weight: 300;
   line-height: 0.98;
   letter-spacing: -0.015em;
-  color: var(--ink);
+  color: var(--paper);
 }
 .creed-section h2 em {
   font-style: italic;
   /* keeps the italic clause together so it wraps as one line, not mid-phrase */
   display: inline-block;
 }
+.creed-section .mid-sub {
+  color: var(--paper);
+}
 .creed-body {
   font-size: 19px;
-  color: var(--ink-soft);
+  color: rgba(230, 230, 227, 0.7);
   font-weight: 300;
   margin-top: 22px;
 }
@@ -894,7 +897,7 @@ section.block {
 
 /* ─── Article body (Sanity Portable Text) ─── */
 .prose {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.7;
   color: var(--ink);
@@ -947,13 +950,36 @@ section.block {
 .prose a:hover {
   color: var(--accent-2);
 }
+/* Tailwind's preflight strips list markers, so restore them explicitly here —
+   without this, Portable Text bullet/numbered lists render as plain paragraphs. */
 .prose ul,
 .prose ol {
   margin: 0 0 24px;
-  padding-left: 22px;
+  padding-left: 24px;
+  list-style-position: outside;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose ul ul {
+  list-style-type: circle;
 }
 .prose li {
   margin-bottom: 8px;
+  padding-left: 4px;
+}
+.prose li::marker {
+  color: var(--accent);
+}
+.prose ol li::marker {
+  color: var(--ink-soft);
+}
+.prose li > ul,
+.prose li > ol {
+  margin: 8px 0 0;
 }
 .prose img {
   width: 100%;
@@ -1204,6 +1230,56 @@ section.block {
 .blog-post-hero h1 {
   font-size: clamp(38px, 5.4vw, 84px);
   max-width: 22ch;
+}
+
+/* Article column: the hero image and the body share this wrap, so the text
+   runs flush to the image edges at every width. 900px of content + gutters. */
+.article-wrap {
+  max-width: 996px;
+}
+.article-hero-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 15 / 8;
+}
+
+/* Author-placed CTA inside an article body */
+.prose .cta-inline {
+  margin: 44px 0;
+  padding: 32px 34px;
+  background: var(--ivory);
+  border-left: 3px solid var(--accent);
+}
+.prose .cta-inline p {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+.prose .cta-inline a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.prose .cta-inline a:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+.prose .cta-inline a .ar {
+  transition: transform 0.2s ease;
+}
+.prose .cta-inline a:hover .ar {
+  transform: translateX(4px);
 }
 
 /* ─── Solutions overview cards ─── */
@@ -1962,7 +2038,8 @@ section.block {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .process-grid {
+  .process-grid,
+  .process-grid.cols-4 {
     grid-template-columns: 1fr 1fr;
     row-gap: 40px;
   }
@@ -2038,7 +2115,8 @@ section.block {
   .vals {
     grid-template-columns: 1fr;
   }
-  .process-grid {
+  .process-grid,
+  .process-grid.cols-4 {
     grid-template-columns: 1fr;
   }
   .coverage-grid {

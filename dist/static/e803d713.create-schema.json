@@ -5,11 +5,11 @@
         "lists": [
           {
             "value": "bullet",
-            "title": "Bulleted list"
+            "title": "Bullet"
           },
           {
             "value": "number",
-            "title": "Numbered list"
+            "title": "Numbered"
           }
         ],
         "marks": {
@@ -98,6 +98,68 @@
           }
         ],
         "type": "image"
+      },
+      {
+        "description": "A highlighted prompt with a button. Drop it anywhere in the article — commonly mid-way or just before the closing paragraph.",
+        "fields": [
+          {
+            "rows": 2,
+            "initialValue": "Thinking through a hire like this? Let’s talk it over.",
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ]
+              }
+            ],
+            "description": "The line above the button.",
+            "name": "text",
+            "type": "text",
+            "title": "Prompt"
+          },
+          {
+            "initialValue": "Get in touch",
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ]
+              }
+            ],
+            "name": "label",
+            "type": "string",
+            "title": "Button label"
+          },
+          {
+            "initialValue": "/contact",
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "presence",
+                    "constraint": "required"
+                  }
+                ]
+              }
+            ],
+            "description": "Leave as /contact to point at the Get in touch page, or paste a full URL.",
+            "name": "href",
+            "type": "string",
+            "title": "Button link"
+          }
+        ],
+        "type": "object",
+        "name": "ctaBlock",
+        "title": "Call to action"
       }
     ],
     "name": "blockContent",

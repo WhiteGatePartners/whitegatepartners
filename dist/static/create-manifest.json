@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-07-28T13:43:49.692Z",
+  "createdAt": "2026-08-08T15:54:50.574Z",
   "studioVersion": "6.1.0",
   "version": 3,
   "workspaces": [
@@ -13,7 +13,7 @@
       },
       "name": "white-gate-partners",
       "projectId": "f47dktv5",
-      "schema": "f226a852.create-schema.json",
+      "schema": "e803d713.create-schema.json",
       "title": "White Gate Partners",
       "tools": "ef87c8fe.create-tools.json"
     }

@@ -64,16 +64,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const ptComponents: PortableTextComponents = {
   types: {
     image: ({ value }) => {
-      const src = urlForImage(value).width(900).url();
+      const src = urlForImage(value).width(1200).url();
       return (
         <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9" }}>
           <Image
             src={src}
             alt={value.alt ?? ""}
             fill
-            sizes="720px"
+            sizes="900px"
             style={{ objectFit: "cover" }}
           />
+        </div>
+      );
+    },
+    // Author-placed CTA — editors drop this into the body wherever it fits.
+    ctaBlock: ({ value }) => {
+      const href = value?.href || "/contact";
+      const label = value?.label || "Get in touch";
+      const external = /^https?:\/\//.test(href);
+      return (
+        <div className="cta-inline">
+          {value?.text && <p>{value.text}</p>}
+          {external ? (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {label} <span className="ar">→</span>
+            </a>
+          ) : (
+            <Link href={href}>
+              {label} <span className="ar">→</span>
+            </Link>
+          )}
         </div>
       );
     },
@@ -133,31 +153,22 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {imgSrc && (
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            maxWidth: 900,
-            margin: "0 auto",
-            height: 480,
-          }}
-        >
-          <Image
-            src={imgSrc}
-            alt={post.mainImage?.alt ?? post.title}
-            fill
-            priority
-            sizes="900px"
-            style={{ objectFit: "cover" }}
-          />
+        <div className="wrap article-wrap">
+          <div className="article-hero-img">
+            <Image
+              src={imgSrc}
+              alt={post.mainImage?.alt ?? post.title}
+              fill
+              priority
+              sizes="900px"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
         </div>
       )}
 
       <section className="block">
-        <div
-          className="wrap"
-          style={{ maxWidth: 720, margin: "0 auto" }}
-        >
+        <div className="wrap article-wrap">
           {post.body ? (
             <div className="prose">
               <PortableText
