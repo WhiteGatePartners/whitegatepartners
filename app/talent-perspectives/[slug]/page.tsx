@@ -28,6 +28,10 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+// Re-fetch from Sanity at most once a minute so Studio edits reach the live
+// site without a redeploy. Without this the HTML is frozen at build time.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const posts: Pick<Post, "slug">[] = await client.fetch(
     `*[_type == "post"]{ slug }`
@@ -109,7 +113,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <section className="pg-hero blog-post-hero">
         <div className="wrap">
-          <span className="kick accent">{post.category}</span>
+          <span className="kick">{post.category}</span>
           <h1>{post.title}</h1>
           <p className="lede">{post.excerpt}</p>
           <div

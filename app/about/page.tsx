@@ -163,9 +163,9 @@ export default async function AboutPage() {
                 mapping, project recruitment or broader talent needs.
               </p>
               <p className="sub">
-                Clients work directly with the people leading each
-                engagement, not layers of junior consultants removed from the
-                brief.
+                The people who win the mandate are the same people shaping the
+                search, sourcing the market and staying accountable through to
+                outcome — not handing the work down once the search begins.
               </p>
             </div>
           </div>

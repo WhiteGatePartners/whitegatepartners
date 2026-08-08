@@ -170,11 +170,10 @@ export default function Home() {
                 <em>expansion</em> needs.
               </h2>
               <p className="sub">
-                We work with startups, SMEs, regional businesses,
-                multinational companies, and China-linked or international
-                companies expanding across Southeast Asia and selected
-                cross-border markets to identify and secure professional,
-                specialist and leadership talent.
+                We work with startups, SMEs, regional businesses and
+                multinational companies at different stages of growth. Across
+                Southeast Asia and selected international markets, we help
+                clients secure professional, specialist and leadership talent.
               </p>
             </div>
           </div>
