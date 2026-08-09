@@ -51,7 +51,10 @@ function formatDate(iso: string) {
 
 export default async function BlogPage() {
   const posts: Post[] = await client.fetch(postsQuery);
-  const [featured, ...rest] = posts;
+  // posts arrive newest-first, so this picks the most recently published post
+  // flagged "Featured post" in Studio, falling back to the newest if none is.
+  const featured = posts.find((p) => p.featured) ?? posts[0];
+  const rest = posts.filter((p) => p._id !== featured?._id);
 
   if (!featured) {
     return (

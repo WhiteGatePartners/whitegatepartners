@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div className="foot-brand">
+            {/* see the note in Navbar.tsx — rendered width is .foot-brand img */}
             <Image
-              src="/logo_grey_long2.png"
+              src="/logo-wordmark-grey.svg"
               alt="White Gate Partners"
-              width={293}
-              height={29}
-              quality={100}
-              style={{ display: "block" }}
+              width={329}
+              height={32}
+              style={{ display: "block", height: "auto" }}
             />
             <p>
               Executive search, specialist recruitment and talent solutions

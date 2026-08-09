@@ -93,6 +93,11 @@ button {
 .brand:hover {
   opacity: 0.82;
 }
+/* Logo is an SVG, so only the width is set — height follows the ratio via the
+   inline height:auto. The media queries below narrow this on small screens. */
+.brand img {
+  width: 370px;
+}
 .navlinks {
   display: flex;
   gap: 38px;
@@ -422,6 +427,11 @@ section.block {
 .val-card {
   background: var(--charcoal);
   padding: 40px 30px 44px;
+  /* row alignment — see the "Card row alignment" note above */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0;
 }
 .val-card .vn {
   font-size: 14px;
@@ -442,6 +452,22 @@ section.block {
   font-weight: 300;
 }
 
+/* ─── Card row alignment ────────────────────────────────────────────────
+   The card grids below (.support-card, .route-card, .val-card,
+   .solution-card, .process-step) each make the card itself a row subgrid
+   spanning one parent row per child element. That way the number, heading,
+   body and any footer line up across every card in a row, even when one
+   heading wraps to two lines and its neighbours only take one.
+
+   Two things to keep in mind when editing these cards:
+   - `grid-row: span N` must equal the number of direct children. Add or
+     remove an element in the markup and the span has to change with it.
+   - `row-gap: 0` is deliberate. These grids use a 1px gap over a coloured
+     background to draw their hairline dividers; without the override that
+     1px would also be painted between rows *inside* each card. Spacing
+     within a card comes from the children's own margins, as before.
+   ──────────────────────────────────────────────────────────────────────── */
+
 /* ─── Who we support ─── */
 .support-section {
   background: var(--grey-light);
@@ -456,6 +482,11 @@ section.block {
 .support-card {
   background: var(--paper);
   padding: 40px 44px 44px;
+  /* row alignment — see the "Card row alignment" note above */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0;
 }
 .support-card .sn {
   font-size: 14px;
@@ -506,6 +537,11 @@ section.block {
 .route-card {
   background: var(--paper);
   padding: 40px 36px 40px;
+  /* row alignment — see the "Card row alignment" note above */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  row-gap: 0;
 }
 .route-card .sc-num {
   display: flex;
@@ -711,6 +747,11 @@ section.block {
 }
 .process-step {
   padding-right: 6px;
+  /* row alignment — see the "Card row alignment" note above */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0;
 }
 .process-step .pn {
   display: block;
@@ -1293,6 +1334,11 @@ section.block {
 .solution-card {
   background: var(--paper);
   padding: 44px 38px 40px;
+  /* row alignment — see the "Card row alignment" note above */
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
 }
 .solution-card .sc-num {
   display: flex;
@@ -1921,6 +1967,9 @@ section.block {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 46px;
+}
+.foot-brand img {
+  width: 293px;
 }
 .foot-brand p {
   font-size: 15px;

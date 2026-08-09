@@ -37,14 +37,15 @@ export default function Navbar() {
       <div className="wrap">
         <nav className="wg-nav">
           <Link className="brand" href="/" aria-label="White Gate Partners">
+            {/* width/height are the SVG's intrinsic size. The rendered width
+                lives in CSS (.brand img) so the responsive overrides win. */}
             <Image
-              src="/logo_grey_long2.png"
+              src="/logo-wordmark-grey.svg"
               alt="White Gate Partners"
-              width={370}
-              height={36}
-              quality={100}
+              width={329}
+              height={32}
               priority
-              style={{ display: "block" }}
+              style={{ display: "block", height: "auto" }}
             />
           </Link>
 
