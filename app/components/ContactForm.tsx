@@ -14,32 +14,15 @@ export default function ContactForm() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  if (submitted) {
-    return (
-      <div style={{ paddingTop: 40 }}>
-        <h2
-          style={{
-            fontFamily: "var(--font-newsreader), Georgia, serif",
-            fontSize: "clamp(40px, 5.6vw, 72px)",
-            fontWeight: 300,
-            lineHeight: 0.96,
-            letterSpacing: "-0.02em",
-            color: "var(--ink)",
-          }}
-        >
-          Thank <em style={{ fontStyle: "italic", color: "var(--accent)" }}>you.</em>
-        </h2>
-        <p style={{ fontSize: 20, color: "var(--ink-soft)", marginTop: 24, fontWeight: 300 }}>
-          We&apos;ll be in touch within one business day.
-        </p>
-      </div>
-    );
-  }
-
   const handleSubmit = useCallback(
     async (e: React.SyntheticEvent<HTMLFormElement>) => {
       e.preventDefault();
       setError(null);
+
+      // Read the form NOW, before any await. React sets `currentTarget` back to
+      // null the moment this handler yields, so reading it after an await gives
+      // null and `new FormData(null)` throws.
+      const data = new FormData(e.currentTarget);
 
       if (!executeRecaptcha) {
         setError("reCAPTCHA not ready. Please try again.");
@@ -62,9 +45,6 @@ export default function ContactForm() {
           return;
         }
 
-        const form = e.currentTarget;
-        const data = new FormData(form);
-
         await emailjs.send(
           SERVICE_ID,
           TEMPLATE_ID,
@@ -80,7 +60,17 @@ export default function ContactForm() {
         );
 
         setSubmitted(true);
-      } catch {
+      } catch (err) {
+        // EmailJS rejects with { status, text }; everything else is an Error.
+        // Logged so a live failure can be diagnosed from the browser console
+        // instead of guessing behind the generic message below.
+        const detail =
+          err && typeof err === "object" && "text" in err
+            ? `EmailJS ${(err as { status?: number }).status ?? ""}: ${(err as { text?: string }).text}`
+            : err instanceof Error
+              ? `${err.name}: ${err.message}`
+              : String(err);
+        console.error("[contact form] submission failed —", detail, err);
         setError("Something went wrong. Please try again or email us directly.");
       } finally {
         setSending(false);
@@ -88,6 +78,31 @@ export default function ContactForm() {
     },
     [executeRecaptcha]
   );
+
+  // Must come after every hook — an early return above them changes the hook
+  // count between renders and React throws "rendered fewer hooks than expected"
+  // on the very render that shows this success state.
+  if (submitted) {
+    return (
+      <div style={{ paddingTop: 40 }}>
+        <h2
+          style={{
+            fontFamily: "var(--font-newsreader), Georgia, serif",
+            fontSize: "clamp(40px, 5.6vw, 72px)",
+            fontWeight: 300,
+            lineHeight: 0.96,
+            letterSpacing: "-0.02em",
+            color: "var(--ink)",
+          }}
+        >
+          Thank <em style={{ fontStyle: "italic", color: "var(--accent)" }}>you.</em>
+        </h2>
+        <p style={{ fontSize: 20, color: "var(--ink-soft)", marginTop: 24, fontWeight: 300 }}>
+          We&apos;ll be in touch within one business day.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form className="folio-form" onSubmit={handleSubmit}>

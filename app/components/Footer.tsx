@@ -12,8 +12,8 @@ export default function Footer() {
             <Image
               src="/logo-wordmark-grey.svg"
               alt="White Gate Partners"
-              width={329}
-              height={32}
+              width={382}
+              height={33}
               style={{ display: "block", height: "auto" }}
             />
             <p>

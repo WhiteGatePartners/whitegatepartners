@@ -42,8 +42,8 @@ export default function Navbar() {
             <Image
               src="/logo-wordmark-grey.svg"
               alt="White Gate Partners"
-              width={329}
-              height={32}
+              width={382}
+              height={33}
               priority
               style={{ display: "block", height: "auto" }}
             />
