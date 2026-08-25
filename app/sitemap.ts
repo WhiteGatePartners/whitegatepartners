@@ -40,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      // Tracks the policy's own "Last updated" date, not the deploy date.
+      url: `${BASE}/privacy-policy`,
+      lastModified: new Date("2026-07-17"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }
