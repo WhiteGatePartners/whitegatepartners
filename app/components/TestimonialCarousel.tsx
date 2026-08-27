@@ -5,11 +5,9 @@ import { useCallback, useEffect, useState } from "react";
 const testimonials = [
   {
     quote: [
-      "It has always been a great experience working with Asher. Throughout the recruitment process, he consistently demonstrates professionalism, responsiveness, and a strong understanding of our hiring needs.",
-      "He provides quality candidates within a reasonable timeframe and maintains clear communication at every stage of the recruitment process. He is also proactive in following up and refining the candidate search based on our feedback, ensuring that the profiles presented are well aligned with our requirements.",
-      "I truly appreciate Asher's dedication and commitment to delivering excellent service. I would be happy to recommend him to any organization looking for a reliable, professional, and results-oriented recruitment partner.",
+      "Working with our dedicated recruiting partner has been a tremendous asset to our talent acquisition efforts. Asher recently helped us successfully close several critical roles, including a Senior Sales Manager in Malaysia and a Senior Manager of Supply Chain. His ability to quickly grasp the nuanced demands of the hi-tech manufacturing sector, combined with his knack for consistently sourcing high-caliber candidates, made the entire process seamless. I highly recommend his services to any organization looking to secure top-tier talent.",
     ],
-    source: "Regional HR Manager, Pharmaceuticals MNC",
+    source: "Global HR Director, Hi-Tech Manufacturing",
   },
   {
     quote: [
@@ -23,6 +21,14 @@ const testimonials = [
       "Johari has supported us on several critical pharmaceutical hiring assignments and consistently delivered strong results. His sector knowledge, regional network and honest market insights helped us secure high-quality talent for challenging roles. He was professional, responsive and took time to understand our business, culture and technical requirements.",
     ],
     source: "Global TA Leader, Pharmaceuticals MNC",
+  },
+  {
+    quote: [
+      "It has always been a great experience working with Asher. Throughout the recruitment process, he consistently demonstrates professionalism, responsiveness, and a strong understanding of our hiring needs.",
+      "He provides quality candidates within a reasonable timeframe and maintains clear communication at every stage of the recruitment process. He is also proactive in following up and refining the candidate search based on our feedback, ensuring that the profiles presented are well aligned with our requirements.",
+      "I truly appreciate Asher's dedication and commitment to delivering excellent service. I would be happy to recommend him to any organization looking for a reliable, professional, and results-oriented recruitment partner.",
+    ],
+    source: "Regional HR Manager, Pharmaceuticals MNC",
   },
   {
     quote: [

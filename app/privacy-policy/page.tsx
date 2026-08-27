@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
             How White Gate Partners collects, uses, discloses, stores and
             protects personal data.
           </p>
-          <p className="legal-meta">Last updated: 17 July 2026</p>
+          <p className="legal-meta">Last updated: 25 August 2026</p>
         </div>
       </section>
 
@@ -150,36 +150,36 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul>
                 <li>
-                  <strong>Identification and contact details</strong>, including
+                  Identification and contact details, including
                   name, email address, telephone number, mailing address and
                   professional profile links.
                 </li>
                 <li>
-                  <strong>Professional and employment information</strong>,
+                  Professional and employment information,
                   including CVs, work history, education, qualifications,
                   certifications, technical skills, sector experience and areas
                   of specialisation.
                 </li>
                 <li>
-                  <strong>Recruitment-related information</strong>, including
+                  Recruitment-related information, including
                   current and expected compensation, notice period,
                   availability, career interests, location preferences,
                   willingness to travel or relocate, nationality, residency and
                   work-authorisation status.
                 </li>
                 <li>
-                  <strong>Assessment and process information</strong>, including
+                  Assessment and process information, including
                   interview notes, consultant observations, references,
                   feedback, offer details, placement information and
                   communications with WGP.
                 </li>
                 <li>
-                  <strong>Client and business information</strong>, including
+                  Client and business information, including
                   company, job title, hiring requirements, commercial enquiries,
                   contracts, billing information and relationship history.
                 </li>
                 <li>
-                  <strong>Technical and website information</strong>, including
+                  Technical and website information, including
                   IP address, device type, browser information, referring pages,
                   website usage and security logs.
                 </li>
@@ -188,9 +188,7 @@ export default function PrivacyPolicyPage() {
                   forms, emails, messages, documents or conversations.
                 </li>
                 <li>
-                  <strong>
-                    Sensitive or potentially sensitive recruitment information.
-                  </strong>{" "}
+                  Sensitive or potentially sensitive recruitment information.{" "}
                   Depending on the role, client requirements and applicable law,
                   we may collect criminal-record or other background-check
                   information; health or medical information; disability or
@@ -644,7 +642,7 @@ export default function PrivacyPolicyPage() {
               <h2 id="part-b" className="legal-part">
                 Part B — Candidate Privacy Notice
               </h2>
-              <p className="legal-part-meta">Updated as at 17 July 2026</p>
+              <p className="legal-part-meta">Updated as at 25 August 2026</p>
               <p>
                 This Candidate Privacy Notice supplements the General Privacy
                 Policy above and explains how White Gate Partners handles
@@ -851,6 +849,10 @@ export default function PrivacyPolicyPage() {
               <h3 id="cpn-contact">
                 <span className="n">9.</span> Contact
               </h3>
+              <p>
+                Questions, requests, complaints or feedback relating to this
+                Notice or your personal data may be directed to:
+              </p>
               <div className="legal-contact">
                 <div className="role">Data Protection Officer</div>
                 <p>
