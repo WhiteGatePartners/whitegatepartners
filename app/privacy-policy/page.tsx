@@ -299,12 +299,12 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p>
-                <strong>Automated decision-making and profiling.</strong> WGP
-                does not currently make significant recruitment decisions solely
-                through automated processing without human involvement. We may
-                use technology-assisted, including AI-assisted, search,
-                matching, screening or psychometric assessment tools to support
-                our consultants; where such tools are used, their outputs are
+                Automated decision-making and profiling. WGP does not currently
+                make significant recruitment decisions solely through automated
+                processing without human involvement. We may use
+                technology-assisted, including AI-assisted, search, matching,
+                screening or psychometric assessment tools to support our
+                consultants; where such tools are used, their outputs are
                 reviewed by an appropriately authorised person.
               </p>
 
@@ -378,9 +378,7 @@ export default function PrivacyPolicyPage() {
                   appropriate safeguards.
                 </li>
               </ul>
-              <p>
-                <strong>We do not sell personal data.</strong>
-              </p>
+              <p>We do not sell personal data.</p>
 
               <h3 id="overseas-transfers">
                 <span className="n">7.</span> Overseas Transfers
@@ -442,14 +440,14 @@ export default function PrivacyPolicyPage() {
               <p>Indicative retention periods include:</p>
               <ul>
                 <li>
-                  <strong>Client and engagement records</strong> — generally
-                  seven (7) years after the relevant engagement ends to support
-                  statutory accounting and record-keeping.
+                  Client and engagement records — generally seven (7) years
+                  after the relevant engagement ends to support statutory
+                  accounting and record-keeping.
                 </li>
                 <li>
-                  <strong>Financial, accounting and tax records</strong> —
-                  generally five (5) to seven (7) years, or longer where
-                  required by IRAS or other applicable law.
+                  Financial, accounting and tax records — generally five (5) to
+                  seven (7) years, or longer where required by IRAS or other
+                  applicable law.
                 </li>
               </ul>
               <p>
@@ -478,22 +476,17 @@ export default function PrivacyPolicyPage() {
               <p>Our website may use the following cookie categories:</p>
               <ul>
                 <li>
-                  <strong>Essential cookies</strong>, which support security,
-                  basic functionality and site operations.
+                  Essential cookies, which support security, basic functionality
+                  and site operations.
+                </li>
+                <li>Functional cookies, which remember preferences.</li>
+                <li>
+                  Analytics cookies, which help us understand use of the website
+                  and may include Google Analytics where enabled.
                 </li>
                 <li>
-                  <strong>Functional cookies</strong>, which remember
-                  preferences.
-                </li>
-                <li>
-                  <strong>Analytics cookies</strong>, which help us understand
-                  use of the website and may include Google Analytics where
-                  enabled.
-                </li>
-                <li>
-                  <strong>Marketing or advertising cookies</strong>, only where
-                  applicable, lawfully permitted and enabled with the required
-                  consent.
+                  Marketing or advertising cookies, only where applicable,
+                  lawfully permitted and enabled with the required consent.
                 </li>
               </ul>
               <p>
@@ -700,11 +693,9 @@ export default function PrivacyPolicyPage() {
                   verification information where appropriate.
                 </li>
                 <li>
-                  <strong>
-                    Sensitive or potentially sensitive recruitment information
-                  </strong>
-                  , such as criminal record or background-check results, health
-                  or medical information, disability or accessibility status,
+                  Sensitive or potentially sensitive recruitment information,
+                  such as criminal record or background-check results, health or
+                  medical information, disability or accessibility status,
                   salary history, and diversity information, including race or
                   ethnic origin, religion or marital status, where relevant,
                   lawfully collected and, where required, with your explicit
